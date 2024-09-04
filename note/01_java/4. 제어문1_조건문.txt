@@ -1,0 +1,22 @@
+if
+
+1.
+int
+if
+else if
+
+2.
+Scanner sc
+int
+if
+else if
+sc close
+
+switch
+Scanner sc
+int
+switch
+case
+	break
+default
+scanner close
