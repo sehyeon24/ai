@@ -1,0 +1,6 @@
+public interface 인터페이스이름 {
+		public /* static final */ 타입 상수이름 = 값;	/* 생략가능 */
+		public /* abstract */ 메서드 이름(매개변수 목록);  //구현된 메소드는 가질 수 없다
+	}
+
+Implement 
