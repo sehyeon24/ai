@@ -1,12 +1,17 @@
-try {
-	    try블럭 ; 익셉션이 발생할 가능성이 있는 명령문들(문제가 발생할 수 있는 로직을 기술)
+Collection
 
-	}catch(익셉션타입 익셉션변수) {
-	    그 익셉션을 처리하는 명령문(try블록안에서 문제가 발생했을 때 대처방안 기술);
+List
+(순서, 중복 허용
+ArrayList
+Vector
+LinkedList
 
-	} finally {
-	    익셉션 발생 여부와 상관없이 맨 마지막에 실행할 명령문;
-	}
+Set
+(순서X, 중복X)
+HashSet
+TreeSet
 
-
-예외처리
+Map
+(key, value)
+HashMap
+Properties
