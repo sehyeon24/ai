@@ -1,5 +1,5 @@
 package com.lec.ex2_map;
-
+// HashMap | put(), size(), isEmpty()
 import java.util.HashMap;
 import java.util.Iterator;
 

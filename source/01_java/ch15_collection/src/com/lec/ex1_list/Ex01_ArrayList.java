@@ -1,5 +1,5 @@
 package com.lec.ex1_list;
-// add(), size(), isEmpty()
+// ArrayList | add(), size(), isEmpty()
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -23,7 +23,7 @@ public class Ex01_ArrayList {
 		arrayList.add("str3");
 		System.out.println(arrayList);
 		System.out.println("현재 arrayList 사이즈 : " + arrayList.size());
-		for(String arr : arrayList) {
+		for(String arr : arrayList) {						// 확장for문
 			System.out.print(arr + "\t");
 		}
 		System.out.println(); 	// 개행 
