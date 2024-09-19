@@ -1,17 +1,22 @@
+1. Collection(자료구조)
+: 다수의 데이터, 즉 데이터그룹을 의미함.
+
+2. 자바에서 제공되는 Collection 자료구조들
+
 Collection
 
-List
-(순서, 중복 허용
-ArrayList
+-List(순서, 중복 허용) : 배열과 비슷하지만 배열의 단점을 보완함. 처음 만들 때 크기를 고정하지 않아도 되고 그 크기는 유동적.
+ArrayList : 배열과 매우 비슷함. 인덱스가 존재하며 데이터는 중복을 허용함.(인덱스가 가장 중요)
 Vector
 LinkedList
 
-Set
-(순서X, 중복X)
+-Set(순서X, 중복X) : 데이터의 순서가 없음.(인덱스 없음) 중복된 데이터 허락하지 않음. 중복된 데이터의 의미는 hashcode()값이 같거나 equal()메소드의 결과값에 의해 해석.
 HashSet
 TreeSet
 
-Map
-(key, value)
+-Map(key, value) : 인덱스 대신 키 값으로 데이터를 액세스 함.(키 값은 unique 해야 함)
 HashMap
 Properties
+
+3. Iterator(반복자)
+: 데이터를 반복적으로 검색하는데 유용한 인터페이스.

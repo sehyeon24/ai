@@ -1,3 +1,31 @@
-2. 싱클톤 패턴 : 싱글톤 패턴(Singleton pattern)이란 어떤 클래스의 객체는 오직 하나인 유일한 객체를 만들어 여러가지 상황에서 동일한 객체에 접근하기 위해 만들어진 패턴.
+1. 패턴 (Singleton patter, Strategy pattern)
 
-1~5단계
+- 싱글톤 패턴(Singleton pattern)
+: 어떤 클래스의 객체는 오직 하나인 유일한 객체를 만들어 여러가지 상황에서 동일한 객체에 접근하기 위해 만들어진 패턴.
+public class SingletonClass {
+	private static SingletonClass SINGLETON_INSTANCE;
+	private int i;
+	private SingletonClass() {	// 생성자 함수가 private 이므로 외부에서는 new를 이용 (이 클래스 내부에서만 생성자 함수 호출 가능)
+		i = 10;
+	}
+
+	public static SingletonClass getSingletonClass() {	// 객체가 생성되기 전에 데이터영역의 클래스 상태에서 바로 접근 가능한 메소드
+		if(SINGLETON_INSTANCE == null)
+			SINGLETON_INSTANCE = new SingletonClass();	// 객체 생성을 이곳에서만 함
+		return SINGLETON_INSTANCE;
+	}
+	public int getI() {
+		return i;
+	}
+	public void setI(int i) {
+		this.i = i;
+	}
+}
+
+- 스트레티지 패턴(Strategy Pattern)
+: 기능 하나를 정의하고 각각을 캡슐화해 교환해서 사용할 수 있도록 만듦.
+1단계 : 각각의 클래스를 정의하고 객체를 만들어 사용.
+2단계 : 각각의 클래스의 공통점을 가진 슈퍼클래스를 만들고 각각의 클래스는 상속시키고 공통점은 제외함.
+3단계 : 추상클래스로 추상화 함.
+4단계 : 3단계에서 좀 더 유연해, 유지보수와 추후 업데이트를 보다 쉽게 할 수 있도록 리펙토링 함.
+5단계 : 1~4단계를 요약해 사용.

@@ -1,18 +1,11 @@
-(1)	Java 언어의 특징
-①	Virtual Machine ? 운영체제(윈도우, 리눅스, 맥OS)의 영향을 받지 않는다.
-②	Garbage Collection ? 개발자는 메모리 관리를 하지 않는다. JVM이 메모리 자동 관리
-③	Object Oriented Program(OOP) ? 객체지향 언어로 개발과 유지보수를 효율적으로 진행 할 수 있다
-④	다중 쓰레드를 지원한다. 
-⑤	기능이 지원 ? 접근에 대한 권한을 변수로 처리 ? Access Modifier(접근 제어자)
+1. Java 언어의 특징
+- Virtual Machin 운영체제(윈도우, 리눅스, 맥OS)의 영향을 받지 않는다.
+- Garbage Collection 개발자는 메모리 관리는 하지 않는다. (JVM이 메모리 자동 관리)
+- Object Oriented Program(OOP) 객체지향 언어로 개발과 유지보수를 효율적으로 진행할 수 있다
+- 다중 Thread 를 지원한다.
+- 기능 지원 >> 접근에 대한 권한을 변수로 처리 >> Access Modifier(접근제한자)
 
-?	JDK 설치
-①	java.sun.com 또는 www.oracle.com 접속
-(https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
-②	Downloads 에서 JDK 최신버전 다운로드 : 운영체제에 맞는 jdk17
-
-3.	이클립스 다운로드 ; java 17을 설치한 경우 
-cf) https://soif0180.tistory.com/entry/Eclipse-이클립스-버전별-정보-및-JDK-최소-요구-버전
-설치된 jdk 버전에 맞는 이클립스를 다운받아 압출을에서 다운로드 후 압축 푼다
-(https://www.eclipse.org/downloads/packages/release/2023-06/r )
-선택 사항 : ini파일 맨 마지막에 -Dfile.encoding=utf-8 추가(한글조합형으로)
-
+2. Java 프로그래밍 환경 설정과 실행 방법
+- 운영체제에 맞는 JDK 설치
+- Java 환경 변수 설정
+- 설치한 JDK 버전에 맞는 이클립스 다운로드

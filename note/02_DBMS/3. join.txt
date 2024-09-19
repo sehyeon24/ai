@@ -1,0 +1,11 @@
+Join
+
+Cross Join
+
+Equi Join
+
+Non-Equi Join
+
+Self Join
+
+Outer Join
