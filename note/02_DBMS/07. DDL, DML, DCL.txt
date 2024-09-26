@@ -1,0 +1,27 @@
+1. DDL : Data Definition Language ; 데이터와 그 구조를 정의
+-CREATE TABLE 로 테이블 구조 정의하기
+-ALTER TABLE로 테이블 구조 변경하기
+-DROP TABLE로 테이블 구조 삭제하기
+-테이블의 모든 로우를 제거하는 TRUNCATE
+-테이블 명을 변경하는 RENAME
+-데이터 딕셔너리와 데이터 딕셔너리 뷰
+
+2. DML : Data Manipulation Language ; 데이터 검색, 수정 등
+-INSERT INTO table_name (column_name, ..) VALUES (column_values, …);
+-UPDATE table_name SET column_name1=value1, column_name2 = value2, …
+-DELETE FROM table_name WHERE conditions ;
+
+3. DCL : Data Control Language ; 데이터베이스 사용자의 권한 제어
+-계정만드는 명령어 CREATE USER 계정 IDENTIFIED BY 비번;
+-권한 부여       	 GRANT 권한 TO 계정;
+-권한 박탈     	 REVOKE 권한 FROM 계정;
+-계정 삭제   	 DROP USER 계정 CASCADE; (계정 삭제는 로그아웃일 경우만 가능)
+
+4. 테이블의 제약조건
+NOT NULL : 이 필드(컬럼,열)은 NULL값을 포함하지 않음을 지정
+UNIQUE  : 테이블의 모든 행에 대해 유일해야 하는 값을 가진 열 또는 열의 조합을 지정
+PRIMARY KEY : 유일하게 테이블의 각 행을 식별
+FOREIGN KEY : 열과 참조된 테이블의 열 사이의 외래키 관계를 적용하고 설정
+REFERENCES 예약어 사용: 참조 무결성 제약 조건 지정
+CHECK : 참이어야 하는 조건을 지정
+DEFAULT : 제약조건은 아니나 쓸 수 있는 것
