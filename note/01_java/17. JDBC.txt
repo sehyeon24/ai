@@ -1,0 +1,35 @@
+1. JDBC 프로그래밍
+- JDBC 드라이버 로드
+- 데이터베이스 연결
+- Statement 생성
+- SQL문 전송
+- 결과 받기
+- 연결 해제
+
+2. Source
+public class __ {
+	public static void main(String[] args) {
+		String driver = " ";
+		String url     = " ";
+		Connection conn = null;
+		Statement   stmt = null;
+		ResultSet	    rs    = null;
+		try {
+		     Class.forName(driver);
+		     conn = DriverManager.getConnection(url, "ID", "PW");
+		     stmt = conn.createStatement();
+		     rs     = stmt.executeQuery();
+		     if() {
+		
+		} catch () {
+		}  finally {
+			try {
+			     if(rs    != null) rs.close();
+			     if(stmt != null) stmt.close();
+			     if(conn != null) conn.close();	
+			} catch () {
+			
+			}
+		}
+	}
+}
