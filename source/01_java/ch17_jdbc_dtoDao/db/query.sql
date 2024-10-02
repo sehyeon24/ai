@@ -22,5 +22,7 @@ SELECT * FROM EMP;
 -- (2) 부서번호로 사원정보 가져오는 함수 : getEmpList(10)
 SELECT * FROM EMP WHERE DEPTNO = 10;
 -- (3) 부서명으로 사원정보 가져오는 함수 : getEmpList("sales")
-SELECT E.* FROM EMP E, DEPT D
+SELECT E.* 
+    FROM EMP E, DEPT D
     WHERE E.DEPTNO = D.DEPTNO AND UPPER(DNAME) = UPPER('sales');
+
