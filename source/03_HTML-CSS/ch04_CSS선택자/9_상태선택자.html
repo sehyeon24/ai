@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        input:focus{        /* 상태선택자 : focus된 상태일때만 */
+            background-color:lightyellow;        
+            border:2px solid green;
+            outline:none;   /* border는 활성화되면 기본 회색틀이 잡히므로 없앰 */
+        }
+        input:enabled{      /* disabled 제외 focus 되는 것들 */
+            color:green;
+        }
+        input:read-only{    /* read-only상태 : disabled, readOnly로 볼 수만 있는(수정불가) */
+            color:red;            
+        }
+        input:disabled{
+            font-size:0.5em;    /* 기존의 0.5배 */
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="hidden" name="hiddenParam" value="쉿" />    <!-- hidden 안 보이는데 넘어감 -->
+        이름 <input type="text" name="name" /><br />
+        아뒤 <input type="text" name="id" /><br />
+        시급 <input type="text" name="sal" value="10000" disabled="disabled" /><br />     <!-- disabled 보이는데 안 넘어감(수정 불가) -->
+        생일 <input type="text" name="birth" value="951212" readonly="readonly" /><br />  <!-- readonly 읽기 전용(수정 불가) -->
+        <input type="submit" /> <!-- 수정불가 -->
+    </form>
+</body>
+</html>
