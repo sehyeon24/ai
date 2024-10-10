@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{  /* li 기본 margin과 padding 값 초기화 */
+            padding : 0px;
+            margin : 0px;
+        }
+        /* ul{
+            overflow : hidden;
+        } */
+        ul li{
+            /* float : left; */     /* 가로정렬 */
+            display : inline-block; /* 가로정렬되지만 떨어짐 */
+            width : 150px;
+            height : 150px;
+            background-color : red;
+            list-style : none;
+        }
+        ul li:nth-child(1){
+            opacity : 1;    /* 디폴트(불투명) */
+        }
+        ul li:nth-child(2){
+            opacity : .5;   /* opacity 속성 : 0~1까지, 0(완전투명), 1(완전불투명) */
+        }
+        ul li:nth-child(3){
+            opacity : 0.2;  /* 글씨까지 적용됨 */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>우리 나라 만세</li>   <!-- 기본(세로정렬) -->
+        <li>우리 나라 만세</li>
+        <li>우리 나라 만세</li>
+    </ul>
+</body>
+</html>

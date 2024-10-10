@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>             /* url()함수의 용도 : 로컬 font 지정, 백그라운드이미지를 지정할 때 */
+        @font-face {    /* 로컬 폰트 설정(setting) */
+            font-family : 'NanumJangMiCe';
+            src: url('ch05/NanumJangMiCe.ttf');
+        }
+        * {
+            font-family : 'NanumJangMiCe', Arial;    /* ''폰트가 아니면 , 뒤에 것을 적용시킴(''없어도 됨) */
+        }
+        #wrap{
+            width : 600px;
+            margin : 0 auto;
+            height : 400px;
+            border : 1px solid gray;
+        }
+        #wrap > #content{
+            width : 80%;
+            margin : 0 auto;
+            height : 100%;
+            border : 1px solid red;
+            /* background-image : url('ch05/sulhyun.jpg');    /* 기본 : 위 가운데 
+               background-repeat : no-repeat;
+               background-position : left center;             /* 왼쪽에 붙어 가운데(center center;는 중복으로 한 번만 써도 됨) */ 
+            background : url('ch05/sulhyun.jpg') center no-repeat;  /* 한 줄에 작성 가능 */
+            background-size : 120%; /* 사진의 가로사이즈를 #content 영역의 120% */
+            font-size : 3em;
+            text-align : center;    /* 좌우 가운데정렬만 */
+            color : yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            설현 사진
+        </div>
+    </div>
+</body>
+</html>

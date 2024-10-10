@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!-- Web font 적용은 style태그 위에 넣어야 함 -->
+    <!-- Web font1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap" rel="stylesheet">
+    <!-- Web font2 -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        @font-face { /* 반드시 맨 위에 작성해야 함 */
+            font-family: 'OleoScript-Bold';
+            src: url('ch05/OleoScript-Bold.ttf');
+        }
+
+        p:nth-child(1) {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        p:nth-child(2) {
+            font-family: 'OleoScript-Bold', Arial; /* 'OleoScript-Bold'가 없으면 Arial로 적용 */
+        }
+
+        p:nth-child(3) {
+            font-family: "Edu AU VIC WA NT Guides", cursive;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+        }
+
+        p:nth-child(4) {
+            font-family: "Pacifico", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <p>System font 시스템 폰트 자리</p>
+    <p>Local font(fonts.google.com에서 download 받은 ttf 파일을 내 프로젝트 폴더 내에 저장)</p>
+    <p>Web font1(fonts.google.com)</p>
+    <p>Web font2(fonts.google.com)</p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{  /* 초기화 */
+            margin : 0; /* 0값만 px제외 가능 */
+            padding : 0;
+        }
+        div{
+            width : 100px;
+            height : 100px;
+        }
+        div#content0{   /* 띄어쓰기 X */
+            background-color : red;
+        }
+        div#content1{
+            background-color : green;
+            padding : 10px;
+        }
+        div#content2{
+            background-color : blue;
+            border : 10px solid black;
+        }
+        div#content3{
+            background-color : yellow;
+            margin : 10px;  /* 부모의 크기 사용 */
+        }
+        div#content4 {
+            background-color: pink;
+            padding: 10px;
+            margin: 10px;
+            border: 10px dotted red;
+        }
+    </style>
+</head>
+<body>
+    <div id="content0">width100*height100</div>
+    <div id="content1">100*100(padding만)</div>
+    <div id="content2">100*100(border만)</div>
+    <div id="content3">100*100(margin만)</div>
+    <div id="content4">100*100(margin, padding, border)</div>
+</body>
+</html>
