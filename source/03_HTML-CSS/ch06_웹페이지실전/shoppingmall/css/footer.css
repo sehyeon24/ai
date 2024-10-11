@@ -1,0 +1,26 @@
+﻿/* footer.css */
+/* * footer * */
+footer {
+    width: 1000px;
+    margin: 5px auto;
+    height: 150px;
+    overflow: hidden;
+}
+footer  div:nth-child(1),
+footer  div:nth-child(2),
+footer  div:nth-child(3) {
+/* footer div .office_logo도 무방 */
+    float: left;
+    width: 33.3%;
+    height: 100px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+footer > div:last-child {
+    clear: both;
+    background-color: black;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}

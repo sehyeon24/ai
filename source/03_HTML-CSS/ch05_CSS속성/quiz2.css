@@ -23,7 +23,6 @@
 #nav {
     border: 1px solid gray;
     margin: 5px;
-    height: 120px;
 }
 
     #nav p {
@@ -51,7 +50,7 @@
 a {
     color: purple;
     text-decoration: none; /* 밑줄제거 */
-    display: block;
+    display: block;        /* 영역확장 */
 }
 
 #nav ul li:first-child {
@@ -107,4 +106,16 @@ a {
     top: 0;
     left: 0;
     z-index: -9999; /* 뒤로 보내기 */
+}
+/****** 서브메뉴 *****/
+#nav{
+    height: 120px;     /* 높이를 지정하지 않으면 nav의 길이가 submenu가 다 나오도록 길어짐 */
+    position:relative; /* z-index값을 적용시키기 위해 */
+    z-index:9999;      /* nav가 section보다 위로 오게끔 */
+}
+.submenu{
+    display:none;       /* 첫 화면에선 안 보임 */
+}
+#nav ul li:hover .submenu { /* menu위에 커서를 올려두면 submenu가 보이게끔 */
+    display: block;
 }

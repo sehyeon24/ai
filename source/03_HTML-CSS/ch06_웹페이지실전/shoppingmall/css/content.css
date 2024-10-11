@@ -1,0 +1,57 @@
+﻿/* content.css */
+/* *  #content  * */
+#content {
+    width: 1000px;          /* #content영역 가운데 정렬 */
+    margin: 0 auto;
+}
+
+/* *  #content .section1  * */
+#content .section1 {
+    overflow: hidden;
+    height: 400px;
+}
+#content .section1 > div {
+    border: 1px solid gray;
+    box-sizing: border-box;     /* slide_banner, side_banner 가로 정렬 */
+    float: left;                /* li 가로정렬 */
+    height: 400px;          
+    line-height: 400px;         /* 글씨 상하 가운데 정렬 */
+    text-align: center;         /* 글씨 좌우 가운데 정렬 */
+}
+#content .section1 .slide_banner {
+    width: 700px;
+}
+#content .section1 .side_banner {
+    width: 300px;
+}
+
+/* *  #content .section2  * */
+#content .section2 .hit_product {
+    margin: 10px 0;    /* 밖여백 */
+    border: 1px solid gray;
+}
+#content .section2 .hit_product, 
+#content .section2 .md_product {
+    border: 1px solid gray;
+}
+#content .section2 .hit_product ul, 
+#content .section2 .md_product ul {
+    overflow: hidden;
+    /* 여기에 padding: 0.4% 넣어주면 맨 밑에 margin-left 하지 않고
+        바로 밑 ul li에 margin: 0 0.8%;로 설정 */
+}
+#content .section2 .hit_product ul li, 
+#content .section2 .md_product ul li {
+    float: left;
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+    width: 24%;
+    border: 1px solid gray;
+    box-sizing:border-box;
+    margin-right: 0.8%;
+}
+#content .section2 .hit_product ul li:first-child,
+#content .section2 .md_product ul li:first-child{
+    margin-left:0.8%;
+}

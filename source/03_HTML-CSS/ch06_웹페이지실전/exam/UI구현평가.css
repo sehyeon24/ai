@@ -1,0 +1,114 @@
+﻿/* 전체 초기화 */
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+#wrap {
+    border: 5px solid black;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+/* nav */
+nav {
+    height: 30px;
+    overflow: hidden;
+    padding: 5px 15px;
+}
+
+    nav #nav_left ul {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+        nav #nav_left ul li {
+            float: left;
+            width: 150px;
+        }
+
+            nav #nav_left ul li:first-child {
+                border: 1px solid black;
+                background-color: #FDEADA;
+                width: 75px;
+            }
+
+    nav #nav_right ul {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+        nav #nav_right ul li {
+            float: right;
+            width: 100px;
+        }
+/* form */
+form div #title {
+    text-align: left;
+    border-bottom: 1px solid black;
+    line-height: 50px;
+    padding: 10px;
+}
+
+form #lnb {
+    float: left;
+    padding: 10px 20px;
+}
+
+    form #lnb ul li {
+        border: 1px solid black;
+        box-sizing: border-box;
+        width: 200px;
+        text-align: left;
+        padding: 5px 0 5px 15px;
+    }
+
+form #content #lnb ul li:nth-child(4) {
+    background-color: #FDEADA;
+    font-weight: bold;
+}
+
+form #my_content {
+    float: left;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 10px;
+    width: 800px;
+    height: 350px;
+}
+
+    form #my_content #sub_title {
+        border-bottom: 1px solid black;
+        padding: 5px 0 5px 5px;
+    }
+
+form #modify {
+    margin: 15px 50px;
+    padding: 30px 50px;
+}
+
+form #pinfo td {
+    padding: 0 60px 0 0;
+}
+
+form #save {
+    line-height: 80px;
+}
+
+/* footer */
+footer {
+    clear: both;
+    background-color: #FDEADA;
+    text-align: center;
+    border: 1px solid black;
+    height: 30px;
+}

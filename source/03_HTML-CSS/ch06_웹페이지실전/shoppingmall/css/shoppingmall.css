@@ -1,0 +1,24 @@
+﻿/* 전체 틀 정렬 */
+/* * 페이지 초기화 * */
+@font-face { /* 전체 폰트 지정 */
+    font-family: 'Roboto-Regular';
+    src: url('../font/Roboto-Regular.ttf'); /* css파일 기준으로 // 상위폴더로 지정 : .. */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto-Regular, Consolas;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: block; /* menu 영역 확장 */
+}
+
+header .logo { /* header-class"logo"-LOGO 폰트 지정 */
+    font-family: "Pacifico", cursive;
+}
+
+/* header */
