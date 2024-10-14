@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <!-- 스마트폰 레이아웃은 viewport를 meta에 설정 -->
+    <meta name="viewport" content="width=device-width, inintial-scale=1.0, user-scalable=yes, maximum-scale=2.0, mininum-sacle=0.7" />
+    <title></title>
+    <style>
+        /* 페이지 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;       /* li태그 구분기호 제거 */
+        }
+        a {
+            text-decoration: none;  /* a태그 밑줄 제거 */
+            display: block;         /* a태그의 공간을 li만큼 확장 */ 
+        }
+
+        /* * header * */
+        header {
+            height: 100px;
+            background-color: #ea8f00;
+        }
+        /* * header #logo_wrap * */
+        header #logo_wrap {
+            height: 50px;       
+            line-height: 50px;      /* 글씨 상하 가운데 정렬 */
+            text-align: center;     /* 글씨 좌우 가운데 정렬 */
+            position: relative;     /* 자식태그가 부모태그 안에 두기 위한 용도 : menu좌, myinfo우 고정 */
+        }
+        header #logo_wrap img.menu {
+            position: absolute;
+            top: 0;
+            left: 10px;
+        }
+        header #logo_wrap img.myinfo {
+            position: absolute;
+            top: 0;
+            right: 10px;
+        }
+        header #logo_wrap a {
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        /* * header #search * */
+        header #search {
+            position: relative;     /* 돋보기 위치 설정 */
+        }
+        header #search input[type='text'] {
+            width: 100%;
+            height: 50px;
+            border: 3px solid #ea8f00;
+            box-sizing: border-box;
+            outline: 3px solid #ea8f00;
+            padding: 10px 60px 10px 10px; /* 우측 돋보기 자리 확보 */
+        }
+        header #search input[type='submit'] {
+            background: url('ch07/search.png'); /* no-repeat 해줘도 됨 */
+            width: 50px;            /* 가로세로 배열을 header의 크기만큼 맞췄으므로 repeat 안 됨 */
+            height: 50px;
+            border: 0;              /* button 성격으로 border 자동생성 제거 */
+            outline: 0;             /* 브라우저 별로 클릭 후 border가 생성되는 경우가 있으므로 제거 */
+            position: absolute;     /* 우측 정렬 */
+            top: 0;
+            right: 0;
+        }
+        /* * * #lnb * * */
+        #lnb ul {
+            overflow: hidden;
+            margin: 7px 0;      /* 위 아래만 밖여백 */
+        }
+        #lnb ul li{
+            float: left;
+            width: 16.66%;      /* 6/100 */
+            text-align: center; /* 글씨 좌우 가운데 정렬 */
+            height: 30px;
+            line-height: 30px;  /* 글씨 상하 가운데 정렬 */
+            border-right: 1px solid #ea8f00;
+            box-sizing: border-box;
+        }
+        #lnb ul li:last-child {
+            border: 0;
+        }
+        /* * * * #section1 * * * */
+        section #section1 .row1, section #section1 .row2, section #section1 .row3 {
+            overflow: hidden;
+        }
+        section #section1 .row1 > div, section #section1 .row2 > div, section #section1 .row3 > div {
+            float: left;
+            width: 50%;     /* 두 개의 기사를 가로 전체에서 나란히 */
+            height: 120px;
+            border: 2px solid white;
+            box-sizing: border-box;
+        }
+        section #section1 img {
+            width: 100%;       /* 부모단의 가로 전부 가져오기 */
+            height: inherit;   /* 부모단의 높이 전부 가져오기 */
+        }
+        /* * * * #section2 * * * */
+        section #section2 {
+            margin: 7px;  /* 상하 7px  좌우 0px */
+        }
+        section #section2 ul li a {
+            padding: 8px;
+            border: 1px solid #cccccc; /* 흐린 회색 */
+            box-sizing: border-box;
+            /* 말줄임(...) 태그 : 한 줄 이상의 데이터에서 한 줄만 출력되고 뒷부분엔 ...이 출력됨 */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        /* * * * #section3 * * * */
+        section #section3 ul li {
+            border: 1px solid gray;
+            box-sizing: border-box;
+            margin: 7px;    /* 밖여백 */
+            padding: 10px;  /* 안여백 */
+            position: relative; /* p태그의 img태그를 psoition 잡을 예정 */
+            height: 120px;  
+        }
+        section #section3 ul li p.img {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+        section #section3 ul li p.txt {
+            padding-left: 120px;
+        }
+        section #section3 p.txt span:first-child {  
+            display: block;
+            /* 말줄임(ellipsis)태그 */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: darkblue;
+        }
+        /* * * * * footer * * * * */
+        footer {
+            background-color: #ea8f00;
+            text-align: center;     /* 글씨, img를 가운데*/
+        }
+        footer p:last-child {
+            padding: 0 0 10px 0;
+            font-size: 0.8em;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo_wrap">
+            <img class="menu" src="ch07/menu.png" alt="메뉴 아이콘" />
+            <a class="logo" href="ex.html">mobile logo</a>
+            <img class="myinfo" src="ch07/myinfo.png" alt="내정보 아이콘" />
+        </div>
+        <div id="search">
+            <form action="#">
+                <input type="text" name="query_word" />
+                <input type="submit" value="" />
+            </form>
+        </div>
+    </header>
+    <div id="lnb">
+        <ul>
+            <li><a href="#">lnb1</a></li>
+            <li><a href="#">lnb2</a></li>
+            <li><a href="#">lnb3</a></li>
+            <li><a href="#">lnb4</a></li>
+            <li><a href="#">lnb5</a></li>
+            <li><a href="#">lnb6</a></li>
+        </ul>
+    </div>
+    <section>
+        <div id="section1">
+            <div class="row1">
+                <div>
+                    <a href="https://v.daum.net/v/20241014043045150">
+                        <img src="https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202410/14/hankooki/20241014043047532riwf.jpg" 
+                             alt="1행1열" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://v.daum.net/v/20241014050053347">
+                        <img src="https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202410/14/joongang/20241014075021306nrmd.jpg" 
+                             alt="1행2열" />
+                    </a>
+                </div>
+            </div>
+            <div class="row2">
+                <div>
+                    <a href="https://v.daum.net/v/20241014050053347">
+                        <img src="https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202410/14/joongang/20241014075021306nrmd.jpg"
+                             alt="2행1열" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://v.daum.net/v/20241014043045150">
+                        <img src="https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202410/14/hankooki/20241014043047532riwf.jpg"
+                             alt="2행2열" />
+                    </a>
+                </div>
+            </div>
+            <div class="row3">
+                <div>
+                    <a href="https://v.daum.net/v/20241014043045150">
+                        <img src="https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202410/14/hankooki/20241014043047532riwf.jpg"
+                             alt="3행1열" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://v.daum.net/v/20241014050053347">
+                        <img src="https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202410/14/joongang/20241014075021306nrmd.jpg"
+                             alt="3행2열" />
+                    </a>
+                </div>
+            </div>
+        </div> <!-- section1 -->
+        <div id="section2">
+            <ul>
+                <li>
+                    <a href="https://v.daum.net/v/20241014050053347">
+                        [단독] 국민연금 고갈 늦추는 '금손'…낮은 급여에 30명 탈출 '러시'
+                    </a>
+                </li>
+                <li>
+                    <a href="https://v.daum.net/v/20241014050053347">
+                        내용이 짧은 것과 긴 것을 섞어서 놔요. 내용이 길면 말줄임 태그를 사용해서 뒷부분 대신 ...으로 대치할 예정입니다
+                    </a>
+                </li>
+                <li>
+                    <a href="https://v.daum.net/v/20241014050053347">
+                        [단독] 국민연금 고갈 늦추는 '금손'…낮은 급여에 30명 탈출 '러시' [단독] 국민연금 고갈 늦추는 '금손'…낮은 급여에 30명 탈출 '러시'
+                    </a>
+                </li>
+                <li>
+                    <a href="https://v.daum.net/v/20241014050053347">
+                        [단독] 국민연금 고갈 늦추는 '금손'
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- section2 -->
+        <div id="section3">
+            <ul>
+                <li>
+                    <p class="img">
+                        <img src="ch07/100img.png" />
+                    </p>
+                    <p class="txt">
+                        <span>첫 번째 span 내용은 말줄임을 할 예정입니다. block타입으로 전환할 예정입니다.</span>
+                        <span>두 번째 span 내용은 말줄임 안 할 예정입니다. 한 줄 이상의 내용은 다음줄로.</span>
+                    </p>
+                </li>
+                <li>
+                    <p class="img">
+                        <img src="ch07/100img.png" />
+                    </p>
+                    <p class="txt">
+                        <span>첫 번째 span 내용은 말줄임을 할 예정입니다. block타입으로 전환할 예정입니다.</span>
+                        <span>두 번째 span 내용은 말줄임 안 할 예정입니다. 한 줄 이상의 내용은 다음줄로.</span>
+                    </p>
+                </li>
+            </ul>
+        </div> <!-- section3 -->
+    </section>
+    <footer>
+        <p>
+            <img src="ch07/logo.png" alt="회사로고" />
+        </p>
+        <p>
+            서울시 땡땡구 뭐뭐로 12, 2F(아무동, xx빌딩)
+        </p>
+    </footer>
+</body>
+</html>

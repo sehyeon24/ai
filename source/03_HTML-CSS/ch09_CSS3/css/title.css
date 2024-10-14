@@ -1,0 +1,12 @@
+#wrap {
+    width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+#wrap .title {
+    text-align: center;
+    text-decoration: underline; /* 밑줄 */
+    margin: 30px;
+}

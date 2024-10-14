@@ -1,0 +1,7 @@
+/* pc 스크린용 .content.css */
+.content {
+    background-color: darkgreen;
+    color: yellow;
+    padding: 30px;
+    text-align: justify;    /* 좌우 전체정렬 */
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    </style>
+    <script>
+        /* java >> int i = 10; i = '홍길동'; 불가 */
+        /* javaScript >> int i = 10; i = '홍길동'; 가능 */
+        var al_pha = 20;                            // al_pha라는 전역변수에 20을 할당(변수 선언과 초기화를 동시에) // var는 적지 않으면 자동생략 // 변수에 특수문자는 _(언더바)만 가능
+        alert(1);   // 오류 확인용  // alert : 경고(팝업)창(+로 연결)
+        console.log('al_pha값은 ', al_pha);         // console창에 먼저 뿌림 // 에러는 무시하고 수행되지 않음(console창에서 확인 가능)
+        alert(2);
+        al_pha = '홍길동';                          // 변수 변경
+        alert(3);
+        console.log('바뀐 al_pha는 ' + al_pha);
+        alert(4);
+        console.log('끝');
+        alert(5);
+    </script>
+</head>
+<body>
+    <script>
+        document.write('윗 스크립트에서 선언된 변수 al_pha = ' + al_pha);   // 출력
+    </script>
+</body>
+</html>
