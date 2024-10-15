@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        var arr = [273, 32, '홍길동'];
+
+        // 1. 일반for문
+        document.write('<h3>1. 일반for문 이용</h3>');
+        for(idx = 0; idx < arr.length; idx++) {   // idx 앞 var or let or const 사용x : var (const는 상수이므로 사용불가)
+            document.write(idx + '번 째 : ' + arr[idx] + '<br>');
+        }
+
+        // 2. for-in문(object, array에서 모두 사용 가능)
+        document.write('<h3>2. for-in문(object, array에서 모두 사용 가능)</h3>');
+        for(var idx in arr) {   // arr방에 있는 값이 아닌 index를 받음
+            document.write(idx + '번 째 : ' + arr[idx] + '<br>');
+        }
+
+        // 3. for-of문(자바의 확장for문과 유사)
+        document.write('<h3>3. for-of문(자바의 확장for문과 유사)</h3>');
+        for(var data of arr) {
+            document.write(data + '<br>');
+        }
+
+        // 4. forEach함수1(배열에서만 사용 가능)★
+        document.write('<h3>4. forEach함수1(배열에서만 사용 가능)★</h3>');
+        // 배열명 : arr
+        // data : 273, 32 '홍길동'
+        // index : 0, 1, 2
+        arr.forEach(function(data, idx){    // 매개변수 안에 function 사용
+            document.write(idx + '번 째 : ' + data + '<br>');
+        });
+        
+        // 5. forEach함수2(forEach:배열에서만 사용 가능)★
+        document.write('<h3>5. forEach함수2(forEach:배열에서만 사용 가능)★</h3>');
+        arr.forEach(function(data){
+            document.write(data + '<br>');
+        });
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

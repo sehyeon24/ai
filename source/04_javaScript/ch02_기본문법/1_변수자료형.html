@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // document : 내장객체
+        // 자료형 : string, number, boolean(true/false), function, object객체(array배열), undefined
+
+        var va;   // 변수 이름:va
+        document.write("1. va타입 : " + typeof(va) + "-값 : " + va + "<br>");   // alt+l+o : 실행하면 undefined 확인 (body에 뿌린 것과 같음)
+
+        va = "이름은 '홍길동'입니다";
+        document.write("2. va타입 : " + typeof(va) + "-값 : " + va + "<br>");   // 실행하면 string타입으로 자동 변경되며 va값도 바뀜
+
+        va = -1232456.2;    // 기존 string값이 사라지고 다른 va를 생성함
+        document.write("3. va타입 : " + typeof(va) + "-값 : " + va + "<br>");   // 실행하면 number타입으로 바뀜
+
+        va = true;          // 기존 string값이 사라지고 다른 va를 생성함
+        document.write("4. va타입 : " + typeof(va) + "-값 : " + va + "<br>");   // boolean타입
+        va = function(){
+            alert("함수");  // alert(경고창) 할당
+        };
+        document.write("5. va타입 : " + typeof(va) + "-값 : " + va + "<br>");   // function타입
+
+        // va();   // alert(경고창) 호출
+        // int arr = {1, 2}; >> java
+        va = [1, 2, 3]; // 배열
+        document.write("6. va타입 : " + typeof(va) + "-값 : " + va + "<br>");   // object타입
+        
+        va = {"name" : "홍길동", "age" : 20}
+        document.write("7. va타입 : " + typeof(va) + "-값 : " + va + "<br>");   // object타입의 객체는 출력되지 않음(타입으로 출력됨)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // prompt : string타입으로 return하므로 문자값도 받음
+        //          확인 클릭시 입력한 string을 return, 취소 클릭시 null을 return
+        let scoreStr = prompt('점수를 입력하세요', '0~100');    
+        document.write('scoreStr타입 : ' + typeof(scoreStr) + ', 값 : ' + scoreStr + '<br>');
+
+        // Number : Number타입으로 형변환
+        //          '99'입력시 -> 99, 'a'입력시 -> NaN(NotaNumber), " " -> 0, "90점" -> NaN
+        // let score = Number(scoreStr);    
+        
+        // parseInt : int타입으로 형변환
+        //            '99'입력시 -> 99, 'a'입력시 -> NaN(NotaNumber), " " -> NaN, "90점" -> 90
+        let score = parseInt(scoreStr);     
+        document.write('score타입 : ' + typeof(score) + ', 값 : ' + score + '<br>');
+        if(! isNaN(score)) {  // score가 NaN이 아니면 true (! 없이 isNaN : score가 NaN이면 true)
+            msg = score >= 80 ? '잘했어요' : '분발하세요';  // 삼항연산자   // var(전역변수) 없어도 자동 인식
+            document.write(msg);
+        }else {               // 숫자가 아닌 것을 입력했을 시
+            document.write('점수를 입력하세요');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

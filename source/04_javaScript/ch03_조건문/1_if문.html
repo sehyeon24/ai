@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // 변수 선언 : const(상수:변경x), let(지역변수:해당 html을 벗어나면 사용할 수 없음), var(전역변수:제한없이 사용가능)
+        // const now = new Date(); // now객체 안에 new Date();라는 변수를 const를 사용해 선언
+        // const hour = now.getHours;   // 0~23
+        const hour = new Date().getHours();   // 0~23 (위 두 줄을 한 번에)
+        if(hour < 12) {     // 현재 시간을 기준으로 12시 이전이면 오전사진, 12시 이후이면 오후사진 출력됨
+            document.write('<h2>상쾌한 오전입니다.</h2>');
+            document.write('<img src = "https://i.namu.wiki/i/KL_9bKPliMW-InkQKc6LFBLn-8BJpom5PKPeY-OCYWLez81ie_IzVFYsjnSlyQ_eUiPLlcRWVOWkGF9sHaelXw.jpg" alt = "오전 사진">');
+        }else {
+            document.write('<h2>신나는 오후입니다.</h2>');
+            document.write('<img src = "https://cdn.pixabay.com/photo/2023/04/04/00/51/sunset-7898136_1280.jpg" alt = "오후 사진">');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
