@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // funVar(); 여기에서는 수행되지 않음(에러)
+
+        // 익명함수 : 반드시 변수에 할당(매개변수 없는)
+        var funVar = function(){};  
+
+        // 함수표현식을 이용한 익명함수
+        var funVar = function(i, j) {    
+            alert('함수표현식을 이용한 익명함수 값들 : ' + i + ', ' + j);
+        };
+        document.write(funVar + '<br>');
+        funVar(10, 20);   // 익명함수의 호출은 변수 이름 뒤에 ()를 붙여서 호출
+        
+        // 화살표함수를 이용한 익명함수(익명함수에서만 사용가능)
+        // 익명함수 재정의 후 호출시 재정의 된 함수로 실행(이전의 funVar를 덮어씀/함수 overroading 불가)
+        funVar = (i, j) => {
+            alert('화살표함수를 이용한 익명함수 값들 : ' + i + ', ' + j);
+        };
+        document.write(funVar + '<br>');
+        funVar(5, 6);
+
+        // var funVar = 'Hello';
+        // document.write(funVar + '<br>');
+        // funVar = 'Hi';
+        // document.write(funVar + '<br>');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

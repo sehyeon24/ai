@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        //[]:배열 {}:객체
+        // 배열에서 사용하는 함수들 : forEach(배열반복문), push(배열추가), slice(배열추출):copy본을 만듦 vs splice(배열제거나 대체):원본에서 바뀜
+
+        let arr = ['가0', '라1', '나2', '라3', '다4', '라5', '마6', '라7'];
+
+        // array.slice(from, to) 매개변수 두 개를 받음 : 원본 배열을 바꾸지 않고 from부터 to앞 까지 추출함
+        let copyArr = arr.slice(1, 5);  // 1~4까지 추출
+        copyArr = arr.slice(2, -2);     // -index값까지 가능 / '라7':-1
+        document.write('원본 arr : ' + arr + '<br>');
+        document.write('복사본 copyArr : ' + copyArr + '<br>');
+
+        // 할당=얕은 복사(arr의 배열값이 들어가는게 아니라 배열값이 있는 arr의 주소가 들어감) / 원본도 변질되므로 복사본을 바꿀 수 없음
+        arr = ['가0', '라1', '나2', '라3', '다4', '라5', '마6', '라7'];
+        copyArr = arr;
+        copyArr[0] = '바꿈';    // '가0' -> '바꿈'
+        document.write('<hr>'); // 실선
+        document.write('원본 arr : ' + arr + '<br>');
+        document.write('복사본 copyArr : ' + copyArr + '<br>');
+        
+        // 깊은 복사(0번 index부터 arr의 길이만큼 복사본을 만들어 복사/원본은 변하지 않음)
+        copyArr = arr.slice(0, arr.length); // 깊은 복사1
+        copyArr = [...arr];         // 깊은 복사2
+        copyArr = Array.from(arr);  // 깊은 복사3
+        copyArr[0] = '또 바꿈';     // 원본 '바꿈'은 그대로
+        document.write('<hr>');
+        document.write('원본 arr : ' + arr + '<br>');
+        document.write('복사본 copyArr : ' + copyArr + '<br>');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

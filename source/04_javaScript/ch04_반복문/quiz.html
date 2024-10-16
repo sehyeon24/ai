@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // 반복문을 이용해서 누적을 원할 때까지 누적할 점수 입력받기
+        // confirm : 확인/취소 버튼
+        // prompt : 입력창, 확인/취소 버튼
+        // alert : 확인 버튼
+        
+        // 변수
+        let cnt = 0;    // 누적횟수(제대로, 잘못 전부)
+        let right = 0;  // 점수를 제대로 입력한 횟수
+        let wrong = 0;  // 점수를 잘못 입력한 횟수('', ' ', 'a', 0보다 작거나 100보다 큰 값)
+        let sum = 0;    // 점수를 제대로 입력했을 경우 누적할 값
+        
+        // while문의 조건(확인을 눌렀을 때 prompt창을 다시 띄우게끔)
+        while(confirm('누적할래?')){    // true면 반복
+            cnt ++;
+            // 입력한 점수를 sum으로 받음
+            let score = parseInt(prompt('누적할 점수?'));   // Number는 0, ' ', 빈스트링를 0으로 받음
+            if(isNaN(score) || score < 0 || score > 100) {
+                wrong ++;
+            }else if(score <= 0 && score <= 100) {
+                right ++;
+                sum += score;   // 점수 누적
+            }
+        }
+
+        /*
+        while(confirm("누적할래?")){
+            cnt++;
+            scoreStr = prompt("몇점(0~100점)?");
+            score = Number(scoreStr);
+                if(scoreStr && scoreStr.trim() && score>=0 && score<=100){
+                    right++;
+                    sum += score;
+                }else{
+                    wrong ++;
+                }
+            }
+        */
+
+        // 누적할래?에서 취소를 눌렀을 때 출력값
+        document.write(cnt + '번 입력<br>');
+        document.write('누적점수 : ' + sum + '<br>');
+        document.write('점수를 제대로 입력한 횟수 : ' + right + '<br>');
+        document.write('점수를 잘못 입력한 횟수 : ' + wrong);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

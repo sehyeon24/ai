@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        /* A가 만든 js부분(빗변의 길이?) */
+
+        // 제곱함수 만들기
+        // 1. 익명함수
+        // const square = x => x*x;
+        
+        function pythagoras(width, height) {
+            // 2. 선언적함수
+            // 내부함수 : 함수 내부에 선언된 함수
+            // 내부함수를 사용하는 이유 : 충돌을 피하기 위함
+            function square(x) {
+                return x*x;
+            }
+            
+            // return (width의 제곱 + height의 제곱)의 루트 : 빗변 구하는 공식
+            return Math.sqrt(square(width) + square(height));   // 루트함수 : Math.sqrt();
+        }
+
+    </script>
+    <script>
+        /* B가 만든 js부분(직각삼각형이면 true를, 직각삼각형이 아니면 false를 return) */
+        function square(w, h, hypotenuse) {
+            // 직각삼각형이면 true를, 직각삼각형이 아니면 false를 return
+            if(w*w + h*h == hypotenuse*hypotenuse) {
+                return true;
+            }else {
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        alert('밑변이 4이고, 높이가 3인 직각삼각형의 빗변의 길이 = ' + pythagoras(4, 3));
+        alert('직각삼각형인지 여부 : ' + square(3, 4, 5));
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // Java에서도 작성 가능
+
+        // 정렬 안 됨
+        document.write('<p>2~9단까지 구구단</p>')
+        for(let i = 1; i <= 9; i++) {   // 1부터 곱하기
+            for(let j = 2; j <=9; j++) {    // 2단부터 9단까지
+                document.write(j + ' * ' + i + ' = ' + (j*i) + ' &nbsp; '); // 2단부터 2 * 1 = 2 ~ 9 * 1 = 9
+            }
+            document.write('<br>'); // 2단에서 9단까지 1곱하기 실행 후 개행
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

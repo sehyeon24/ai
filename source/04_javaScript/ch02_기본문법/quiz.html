@@ -13,7 +13,7 @@
             var korStr = prompt('국어 점수를 입력하세요.(0~100)'); // korStr로 입력한 점수를 받고
             kor = Number(korStr);                                // Number로 형변환
         }while(!korStr || !korStr.trim() || isNaN(kor) || kor < 0 || kor > 100);
-        // ㄴ !korStr : 빈스트링까지 유효하지 않은 것으로 인식(미입력 후 확인, 취소 클릭시), trim()공백제거 ||(or) isNaN(kor) : kor이 NaN일 때 || kor이 0보다 작을 때 || kor이 100보다 클 때
+        // ㄴ !korStr : 빈스트링까지 유효하지 않은 것으로 인식(미입력 후 확인, 취소 클릭시), trim()공백제거는 false이므로 !로 false 만들기 ||(or) isNaN(kor) : kor이 NaN일 때 || kor이 0보다 작을 때 || kor이 100보다 클 때
 
         do {
             eng = parseInt(prompt('영어 점수를 입력하세요.(0~100)'));

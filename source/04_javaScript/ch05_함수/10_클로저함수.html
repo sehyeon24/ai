@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // 클로저함수 : return된 함수(function의 return을 함수로)
+        function test(name) {
+            var msg = 'Hello, ' + name + '님 반갑습니다.';
+            /* 1
+            var fun = function() {
+                alert(msg);
+            };
+            return fun;
+            */
+
+            /* 2
+            return function(){
+                alert(msg)};
+            */
+            return () => alert(msg);
+        }
+        /*
+        msg를 alert하는 function을 return
+        var variable = test('홍길동');
+        variable();
+        */
+        test('홍길동')();   // return 호출용 빈괄호
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
