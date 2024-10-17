@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // i가 0일때 타이머실행, i가 1일때 타이머실행 ... 
+        // i가 2일때 for문으로 돌아가 i++에서 끝나므로 3이 출력됨
+        // 경고창 순서 : 3 -> 3 -> 3 끝
+        for(var i = 0; i < 3; i++) {
+            setTimeout(() => {
+                alert(i);   // i를 출력하는 alert가 0초 후에 실행
+            }, 0);
+        }
+
+        // 경고창 순서 0 -> 1 -> -> 2 끝
+        // 방법1. i를 let(지역변수)으로 바꾸면 for문이 끝나고 조건문에 들어가지 않게 출력됨
+        for(let i = 0; i < 3; i++) {
+            setTimeout(() => {
+                alert(i);   // i를 출력하는 alert가 0초 후에 실행
+            }, 0);
+        }
+        // 방법2. 자기호출함수를 이용
+        for(var i = 0; i < 3; i++) {
+            (function(a){
+                setTimeout(() => alert(a), 0);
+            })(i);
+        }
+        // 방법3. 배열이용
+        [0, 1, 2].forEach((data, idx) => {   // 콜백함수가 매개변수로 들어옴
+            setTimeout(() => alert(data), 0);
+        });
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

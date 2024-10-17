@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // 1000밀리세컨마다 callback함수 수행
+        var id = setInterval(() => document.write(new Date() + '<br>'), 1000);
+
+        // 5초 후 타이머(id) 중지
+        // clearInterval(id); 5초가 지나지 않고 끝남
+        setTimeout(() => {
+            clearInterval(id);
+            document.write('5초 후 타이머 중지함');
+        }, 5000);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

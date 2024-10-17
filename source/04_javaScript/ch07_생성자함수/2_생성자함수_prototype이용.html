@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // prototype(공통영역)을 이용한 객체를 생성하는 생성자함수 호출
+
+        // 객체를 생성하는 생성자함수
+        function Student(name, kor, mat, eng, sci) {
+            this.name = name;
+            this.kor  = kor;
+            this.mat  = mat;
+            this.eng  = eng;
+            this.sci  = sci;
+        }   // 생성자함수(Student)
+        
+        // Student 공통영역(prototype)에 getSum, getAvg, toString
+        Student.prototype.getSum = function(){
+            return this.kor + this.mat + this.eng + this.sci;
+        };
+        Student.prototype.getAvg = function(){
+            return this.getSum()/4;
+        };
+        Student.prototype.toString = function() {
+                var output = '';
+                for(let key in this) {
+                    if(key != 'getSum' && key != 'getAvg' && key != 'toString') {
+                        output += key + ' : ' + this[key] + ' ';
+                    }else if(key == 'getSum'){
+                        output += key.substring(3) + ' : ' + this[key]() + ' '; 
+                    }else if(key == 'getAvg'){
+                        output += key.substring(3) + ' : ' + this[key]() + '\n';
+                    }   // if
+                }   // for
+                return output;
+            };  // toString
+        
+        let students = [new Student('홍길동', 99, 98, 97, 96),
+                        new Student('박길동', 99, 98, 97, 96),
+                        new Student('최길동', 99, 98, 97, 96),
+                        new Student('김길동', 99, 98, 97, 96),
+                        new Student('한길동', 99, 98, 97, 96),
+        ];
+        students.push(new Student('성춘향', 11, 22, 33, 44));
+
+        students.forEach((data, idx) => {
+            document.write(idx + '번 째 ' + data + '<br>');
+        });
+
+        students.pop(); // 배열 마지막 인덱스 값 제거
+        students.pop(); // 배열 마지막 인덱스 값 제거
+        students.pop(); // 배열 마지막 인덱스 값 제거
+        document.write('<h3>pop 후</h3>');
+        students.forEach((data, idx) => {
+            document.write(data + '<br>');
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
