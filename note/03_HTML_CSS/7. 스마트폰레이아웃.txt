@@ -1,0 +1,14 @@
+7. 스마트폰 레이아웃
+
+1) viewport ;
+-width : 화면의 너비
+-height : 화면의 높이
+-initial-scale : 초기 확대 비율
+-user-scalable : 확대 및 축소 가능 여부
+-minimum-scale : 최소 비율
+-maximum-scale : 최대 비율
+2) header 제작
+3) 네비 제작
+4) 본문 제작 : 본문에 해당하는 section 레이아웃을 만들어 봅니다
+5) footer의 레이아웃
+6) 기본 스마트폰 레이아웃

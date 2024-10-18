@@ -15,6 +15,7 @@
             \W : 영문자나 숫자가 아닌 문자(\w를 제외한 것)
             .  : (\n을 제외한 문자)
             \. : (.)
+            \+ : +
             {2,} 2번 이상 반복
             {m, n} m~n회 반복
             +  : 1회 이상 반복
@@ -36,20 +37,20 @@
                 <li>
                     <label for="tel">연락처</label> <!-- 연락처를 눌러도 커서가 깜빡이게 -->
                     <input type="text" name="tel" id="tel"
-                               placeholder="전화번호 형식(첫 화면 도움말)"
-                               pattern="\d{2,3}-?\d{3,4}-?\d{4}"
-                               title="패턴대로 입력되지 않아 submit이 일어나지 않을 때 도움말"
-                               required="required"
-                               autofocus="autofocus"
-                               />
-                           
+                            placeholder="전화번호 형식(첫 화면 도움말)"
+                            pattern="\d{2,3}-?\d{3,4}-?\d{4}"
+                            title="패턴대로 입력되지 않아 submit이 일어나지 않을 때 도움말"
+                            required="required"
+                            autofocus="autofocus"
+                            />
+                        
                 </li>
                 <li>
                     <label for="email">이메일</label>
                     <input type="text" name="email" id="email"
-                               placeholder="아이디@도메인"
-                               pattern="[a-zA-Z0-9가-힣\.]+@[a-zA-Z0-9]+(\.[a-z]+){1,2}"
-                               title="이메일 형식을 지켜주세요." />
+                            placeholder="아이디@도메인"
+                            pattern="[a-zA-Z0-9가-힣\.]+@[a-zA-Z0-9]+(\.[a-z]+){1,2}"
+                            title="이메일 형식을 지켜주세요." />
                 </li>
             </ul>
         </fieldset>

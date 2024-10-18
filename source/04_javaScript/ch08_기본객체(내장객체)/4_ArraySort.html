@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // 일반배열 sort
+        var arr1 = new Array('big', 'zaa', 'abz', 'abc');   // ['big', 'zaa', 'abz', 'abc'];
+        var arr2 = [52, 100, 12, 94, 32];
+        // sort는 배열의 순서 자체를 바꾸기 때문에 복사 해둠
+        let arr1Copy = arr1.slice();  // 깊은복사
+        let arr2Copy = [...arr2];     // 깊은복사
+        arr2Copy = Array.from(arr2);  // 깊은복사
+        // sort (문자|숫자 : ascii 코드 순으로 정렬, 한글 : 가나다 순으로 정렬)
+        arr1Copy.sort();    // ascii 코드 순으로 정렬
+        document.write('arr1 원본 : ' + arr1 + '<br>');
+        document.write('arr1Copy : ' + arr1Copy + '<br>');
+        arr2Copy.sort(function(left, right) {   // callback함수
+            return left-right;  // 오름차순 정렬
+        });
+        document.write('arr2 원본 : ' + arr2 + '<br>');
+        document.write('arr2Copy 오름차순 정렬 : ' + arr2Copy + '<br>');
+        arr2Copy.reverse();
+        document.write('arr2Copy reverse 결과 : ' + arr2Copy + '<br>');
+        arr2Copy.sort(function(left, right){
+            // return left-right;   // 오름차순 정렬
+            return right-left;  // 내림차순
+        });
+        document.write('arr2Copy 내림차순 정렬 : ' + arr2Copy + '<br>');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

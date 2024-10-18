@@ -1,0 +1,275 @@
+6. 웹페이지 실전
+
+-html
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="css/header.css" , rel="stylesheet" />
+    <link href="css/content.css" , rel="stylesheet" />
+    <link href="css/footer.css" , rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="gnb">
+            <ul>
+                <li><a href="#m1">Login</a></li>
+                <li><a href="#m2">Join Us</a></li>
+                <li><a href="#m3">Wish Lis</a></li>
+                <li><a href="#m4">Cart</a></li>
+                <li><a href="#m5">Order</a></li>
+                <li><a href="#m6">My Page</a></li>
+                <li><a href="#m7">Notice</a></li>
+                <li><a href="#m8">QnA</a></li>
+                <li><a href="#m9">Review</a></li>
+                <li><a href="#m10">Favorite</a></li>
+            </ul>
+        </div>
+        <div class="logo">LOGO</div>
+        <div class="hitmenu">
+            <ul>
+                <li><a href="#h4">hit4</a></li>
+                <li><a href="#h3">hit3</a></li>
+                <li><a href="#h2">hit2</a></li>
+                <li><a href="#h1">hit1</a></li>
+            </ul>
+            <div class="lnb"></div>
+            <ul>
+                <li><a href="#m1">menu1</a></li>
+                <li><a href="#m2">menu2</a></li>
+                <li><a href="#m3">menu3</a></li>
+                <li><a href="#m4">menu4</a></li>
+                <li><a href="#m5">menu5</a></li>
+                <li><a href="#m6">menu6</a></li>
+                <li><a href="#m7">menu7</a></li>
+                <li><a href="#m8">menu8</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="content">
+        <div class="section1">
+            <div class="slide_banner">slide banner</div>
+            <div class="side_banner">side banner</div>
+        </div>
+        <div class="section2">
+            <div class="hit_product">
+                <!-- div 사용 가능 -->
+                <ul>
+                    <li><a href="#">hit_product1</a></li>
+                    <li><a href="#">hit_product2</a></li>
+                    <li><a href="#">hit_product3</a></li>
+                    <li><a href="#">hit_product4</a></li>
+                </ul>
+            </div>
+            <div id="md_product">
+                <ul>
+                    <li><a href="#">md_product1</a></li>
+                    <li><a href="#">md_product2</a></li>
+                    <li><a href="#">md_product3</a></li>
+                    <li><a href="#">md_product4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="office_logo">office logo</div>
+        <div id="office_address">office address</div>
+        <div id="shopping_info">shopping info</div>
+        <div id="copyright">Copyright ⓒ Joeun System Corp. All rights reserved.</div>
+    </footer>
+</body>
+</html>
+
+-css
+/* header.css */
+/* * 페이지 초기화 * */ /* header에만 적용해도 전체 적용 됨 */
+@font-face {    /* 전체 폰트 지정 */
+    font-family: 'Roboto-Regular';
+    src: url('../font/Roboto-Regular.ttf'); /* css파일 기준으로 // 상위폴더로 지정 : .. */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto-Regular, Consolas;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: block;         /* menu 영역 확장 */
+}
+
+li {
+    list-style: none;
+}
+
+/* * * header .gnb * * */
+header .gnb {
+    /* width: 100%;    /* 생략 가능 */
+    background-color: black;
+}
+header .gnb ul {
+    width: 1000px;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;  /* 상하 가운데 정렬 */
+    overflow: hidden;
+}
+header .gnb ul li {
+    float: left;
+    width: 80px;
+    margin: 0 10px;
+    text-align: center;
+    /* border: 2px solid yellow;
+       box-sizing: border-box;     /* 갯수가 잘려 행 맞추기 // 확인용 */
+}
+header .gnb ul li a {
+    color: white;
+}
+
+/* * * header .logo * * */
+header .logo {  /* header-class"logo"-LOGO 폰트 지정 */
+    font-family: "Pacifico", cursive;
+    width: 200px;           /* 가로 */
+    height: 100px;          /* 높이 */
+    line-height: 100px;     /* 글씨 상하 가운데 정렬*/
+    margin: 30px auto;      /* 밖여백 */
+    text-align: center;     /* 글씨 가운데 정렬 */
+    border: 1px solid gray; /* 테두리 */
+    font-size: 2em;         /* 글씨크기 2배 */
+}
+
+/* * * header .hitmenu * * */
+header .hitmenu ul {
+    width: 1000px;          /* 가로 */
+    margin: 3px auto;       /* 밖여백 : 위 3px 나머지 자동 */
+    overflow: hidden;       /* li 가로정렬 */
+}
+header .hitmenu ul li {
+    float: right;            /* 가로정렬 */
+    border: 1px solid gray;  /* 테두리*/
+}
+header .hitmenu ul li a {
+    /* width: 90px;            /* 가로 
+       height: 40px;           /* 세로 
+       line-height: 40px;      /* 글씨 상하 가운데 정렬 
+       text-align: center;     /* 글씨 가운데 정렬 */
+    padding: 10px 30px;     /* 상 우(하 좌) 안여백 : 위 네 줄과 같은 출력 */
+}
+header .hitmenu ul li:first-child {
+    border-radius: 0 10px 10px 0;   /* hit4 모서리 깎기 */
+}
+header .hitmenu ul li:last-child {
+    border-radius: 10px 0 0 10px;   /* hit1 모서리 깎기 */
+}
+
+/* * * header .lnb * * */
+header .lnb {
+    border-top: 1px dashed gray;
+    border-bottom: 1px dashed gray;
+}
+header .lnb ul {
+    width: 1000px;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+header .lnb ul li {
+    float: left;
+    width: 125px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* content.css */
+/* *  #content  * */
+#content {
+    width: 1000px;          /* #content영역 가운데 정렬 */
+    margin: 0 auto;
+}
+
+/* *  #content .section1  * */
+#content .section1 {
+    overflow: hidden;
+    height: 400px;
+}
+#content .section1 > div {
+    border: 1px solid gray;
+    box-sizing: border-box;     /* slide_banner, side_banner 가로 정렬 */
+    float: left;                /* li 가로정렬 */
+    height: 400px;          
+    line-height: 400px;         /* 글씨 상하 가운데 정렬 */
+    text-align: center;         /* 글씨 좌우 가운데 정렬 */
+}
+#content .section1 .slide_banner {
+    width: 700px;
+}
+#content .section1 .side_banner {
+    width: 300px;
+}
+
+/* *  #content .section2  * */
+#content .section2 .hit_product {
+    margin: 10px 0;    /* 밖여백 */
+    border: 1px solid gray;
+}
+#content .section2 .hit_product, 
+#content .section2 .md_product {
+    border: 1px solid gray;
+}
+#content .section2 .hit_product ul, 
+#content .section2 .md_product ul {
+    overflow: hidden;
+    /* 여기에 padding: 0.4% 넣어주면 맨 밑에 margin-left 하지 않고
+        바로 밑 ul li에 margin: 0 0.8%;로 설정 */
+}
+#content .section2 .hit_product ul li, 
+#content .section2 .md_product ul li {
+    float: left;
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+    width: 24%;
+    border: 1px solid gray;
+    box-sizing:border-box;
+    margin-right: 0.8%;
+}
+#content .section2 .hit_product ul li:first-child,
+#content .section2 .md_product ul li:first-child{
+    margin-left:0.8%;
+}
+
+/* footer.css */
+/* * footer * */
+footer {
+    width: 1000px;
+    margin: 5px auto;
+    height: 150px;
+    overflow: hidden;
+}
+footer  div:nth-child(1),
+footer  div:nth-child(2),
+footer  div:nth-child(3) {
+/* footer div .office_logo도 무방 */
+    float: left;
+    width: 33.3%;
+    height: 100px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+footer > div:last-child {
+    clear: both;
+    background-color: black;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}

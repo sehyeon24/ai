@@ -1,0 +1,8 @@
+2. JS 기본문법
+
+1) 자료형[string, number, boolean, object[array], function, undefined]
+2) 내장함수[alert, prompt, confirm]
+3) 변수의 생성과 사용
+-var : 변수 선언 시 사용. 변수의 재선언 가능. 전역변수로 주로 사용
+-let : 변수 선언 시 사용. 변수의 재선언 불가. 블록 레벨 스코프 적용
+-const : 새로운 값을 재할당 안됨. 객체의 경우 내부값은 바꿀 수 있음

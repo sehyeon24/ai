@@ -1,0 +1,29 @@
+4. JS 반복문
+
+1) 배열
+var array = [];
+
+2) 배열에서의 반복문
+-for문
+for() {
+}
+출력
+-for-in문
+for(var i in array) {
+}
+출력
+-forEach문
+arr.forEach(functoin(data, idx) {
+	출력문
+};
+출력
+
+3) do~while문
+do {
+}while ();
+출력
+
+4) while문
+while () {
+}
+출력

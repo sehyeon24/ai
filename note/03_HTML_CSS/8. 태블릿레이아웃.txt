@@ -1,0 +1,156 @@
+8. 태블릿 레이아웃
+
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        /* 전체 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* #top_bar */
+        #top_bar {
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background-color: #FFD800;
+            position: fixed;    /* 스크롤 시 고정 포지션 top, left, right : 0 */
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        #top_bar ul {
+            overflow: hidden;
+        }
+        #top_bar ul li {
+            float: left;
+            width: 16.66%;
+            border-right: 1px dotted gray;
+            box-sizing: border-box;
+            font-size: 1.5em;
+        }
+
+        /* #left_bar */
+        #left_bar {
+            width: 200px;
+            text-align: center;
+            background: saddlebrown;
+            position: fixed;
+            left: 0;
+            top: 100px;     /* #top_bar만큼 */
+            bottom: 100px;  /* #botton_bar만큼 */
+        }
+        #left_bar ul li a {
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid gray;
+        }
+
+        /* #right_bar */
+        #right_bar {
+            width: 200px;
+            text-align: center;
+            background: lightyellow;
+            position: fixed;
+            right: 0;
+            top: 100px;     /* #top_bar만큼 */
+            bottom: 100px;  /* #botton_bar만큼 */
+        }
+        #right_bar img {
+            width: 120px;
+        }
+
+        /* #bottom_bar */
+        #bottom_bar {
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background-color: lightyellow;
+            position: fixed;    /* 스크롤 시 고정 포지션 top, left, right : 0 */
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        /* #content */
+        #content {
+            padding: 110px 210px 110px 210px;
+            text-align: justify;    /* 균등분할 */
+        }
+        #content img {
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="top_bar">
+        <ul>
+            <li><a href="#m">GNB1</a></li>   <!-- shit+alt+방향키 : 한 줄 복사(ctrl+d) -->
+            <li><a href="#m">GNB2</a></li>   <!-- alt+방향키 : 한 줄 이동 -->
+            <li><a href="#m">GNB3</a></li>
+            <li><a href="#m">GNB4</a></li>
+            <li><a href="#m">GNB5</a></li>
+            <li><a href="#m">GNB6</a></li>
+        </ul>
+    </div>
+    <div id="left_bar">
+        <ul>
+            <li><a href="#m">LNB_01</a></li>
+            <li><a href="#m">LNB_02</a></li>
+            <li><a href="#m">LNB_03</a></li>
+            <li><a href="#m">LNB_04</a></li>
+            <li><a href="#m">LNB_05</a></li>
+            <li><a href="#m">LNB_06</a></li>
+            <li><a href="#m">LNB_07</a></li>
+            <li><a href="#m">LNB_08</a></li>
+            <li><a href="#m">LNB_09</a></li>
+            <li><a href="#m">LNB_10</a></li>
+        </ul>
+    </div>
+    <div id="right_bar">
+        <ul>
+            <li>
+                <a href="">
+                    <img src="" 
+                            alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="" 
+                            alt="">
+                </a>
+            </li>
+            <li>
+                <a href="http://www.daum.net">
+                    <img src="" 
+                            alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="bottom_bar">
+        <p>...</p>
+    </div>
+    <div id="content">
+        <img src="100img.png" alt="더미 이미지"> <!-- https://via.placeholder.com/100x100 더미 이미지 생성 --> <!-- 폴더 내 이미지는 자동완성 됨 -->
+        <p>
+            ...
+        </p>
+    </div>
+</body>
+</html>

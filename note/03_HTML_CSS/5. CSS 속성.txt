@@ -1,0 +1,23 @@
+5. CSS 속성
+
+1) CSS3 단위들: em, %, px, pt
+2) url()함수를 이용한 background-image, 로컬 폰트 지정 : background-image 속성의 경우 배경이미지의 경로를 나타냄
+3) display : inline(span태그 - 높이의 속성 없음, block(div태그 p태그 li태그 - 높이의 속성), inline-block(block의 속성을 갖고 옆으로 붙여 나감), none
+4) visibility : display 속성의 none속성값과 비교
+-visibility:hidden은 공간은 확보, 안보임
+-display:none은 공간도 사라짐
+5) opacity : 투명도 조절
+6) margin(밖 여백)과 padding(안 여백)
+7) box-sizing ; border를 box안으로 : 전체 사이즈의 크기 변경
+8) border(테두리)
+9) 글자관련 속성; font-family(글꼴), font-size(크기), font-weight(진하게), font-style(이탤릭체), line-height(행간격 조정용도나 세로축에 대한 정렬 용도), text-align(글자에 대한 정렬), text-decoration(글꼴 모양의 속성)
+10) 폰트(웹폰트, 로컬폰트, 시스템 폰트)
+-웹 폰트 : 인터넷만 연결되어 있다면, 다양한 폰트를 웹사이트 방문자에게 제공할 수 있도록 고안된 폰트가 웹폰트 입니다. 웹사이트를 방문하는 순간, 웹 폰트를 다운받아 웹사이트를 구성 합니다.  (ex) http://fonts.google.com
+-로컬폰트 (무료다운: 구글이나 네이버 폰트, 그외 사이트)
+	@font-face {
+		font-family : 'nm';
+		src: url('font/폰트화일명');
+	}
+11) position
+①absolute 속성값 ②fixed 속성값 ③static 속성값 ④relative 속성값 ⑤relative와 absolute의 혼합 사용
+12) float : position 속성과 함께 요소의 위치를 설정하기 위한 속성
