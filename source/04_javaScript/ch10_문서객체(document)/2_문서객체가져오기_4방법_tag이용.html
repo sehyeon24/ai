@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // tag로 가져오기 : 배열로 return
+        window.onload = function(){
+            var header = document.getElementsByTagName('h1');
+            // 일반for문
+            for(var idx = 0; idx < header.length; idx++) {
+                header[idx].innerHTML = '바꿔 #' + idx;
+            }
+
+            // for-in문
+            // for(var idx in header) {
+            //     header[idx].innerHTML = '바꿔 #' + idx;
+            // }
+
+            // for-of문
+            // for(var idx of header) {
+            //     idx.innerHTML = '바꿔';
+            // }
+            
+            // 문서객체모델 배열에서는 forEach()함수 사용불가
+            // header.forEach((element, idx) => {
+            //     element.innerHTML = '바꿔 #' + idx;
+            // });
+        };
+    </script>
+</head>
+<body>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+    <h1>HEADER</h1>
+</body>
+</html>

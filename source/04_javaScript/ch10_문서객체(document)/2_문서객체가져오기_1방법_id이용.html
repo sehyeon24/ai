@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // function 안에서 변수가 선언되면 function 밖에서는 인식하지 못하므로 밖에 선언함
+        var title, clock, btn;
+        var timerId;
+        var toggle = 0; // 타이머 구동중이면 0, 타이머 중지중이면 1
+
+        window.onload = function(){ // 화살표 함수도 사용 가능하지만 일반함수 표현식을 더 많이 사용함
+            title = document.getElementById('title');
+            title.innerHTML = '날짜와 시간';    // body의 h1태그의 내용 변경
+            clock = document.getElementById('clock');
+            clock.innerHTML = new Date().toLocaleString();
+            timerId = setInterval(() => {   // 1초마다 clock에 시간 뿌리기
+                clock.innerHTML = new Date().toLocaleString();
+            }, 1000);
+        };
+        
+        const toggleFunction = () => {  // 익명함수
+            if(toggle == 0){    // 타이머 중지
+                clearInterval(timerId);
+                toggle = 1;
+                btn = document.getElementById('btn');
+                btn.innerHTML = '타이머 중지됨';
+            }else if(toggle == 1){  // 타이머 재가동
+                timerId = setInterval(function(){
+                    clock.innerHTML = new Date().toLocaleString();
+                }, 1000);
+                toggle = 0;
+                btn = document.getElementById('btn');
+                btn.innerHTML = '타이머 가동중';
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1 id="title">title</h1>
+    <h1 id="clock">날짜와 시간</h1>
+    <button id="btn" onclick="toggleFunction()">타이머 가동중</button>
+    <!-- button을 누르면 toggleFunction이 실행되면서 clock이 멈추게끔 (반복 : toggle)-->
+</body>
+</html>

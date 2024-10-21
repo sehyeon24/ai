@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        p {
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var openerId = opener.document.getElementById('id').value;
+            var parentData = document.querySelector('input[type="text"]');
+            parentData.value = openerId;
+        };
+        function confirmOk() {
+            var id = document.querySelector('input[type="text"]').value;
+            opener.document.getElementById('id').value = id;
+            close();
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <p>
+            ID <input type="text" name="id">
+            <button>체크</button>
+        </p>
+        <p>
+            <button onclick="confirmOk()">아이디사용</button>
+        </p>
+    </form>
+</body>
+</html>

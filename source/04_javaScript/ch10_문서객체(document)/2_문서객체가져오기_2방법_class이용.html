@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        window.onload = function(){
+            // document.getElements:~s로 가져오면 배열로 return
+            // id로 가져오기 document.getElementById('id명'); : 엘리먼트 하나 return
+            // class로 가져오기 documment.getElementsByClassName('class명'); : 배열로 return
+            var clock1 = document.getElementsByClassName('clock1'); // 0방:h1태그, 1방:p태그
+            clock1[0].innerHTML = new Date().toLocaleDateString();
+            clock1[1].innerHTML = new Date().toLocaleTimeString();
+
+            var clock2 = document.getElementsByClassName('clock2')[0];  // clock2는 한 개로 0번 방 밖에 없으므로 0번 방만 가져오도록(배열로 return하지 않음)
+            clock2.value = new Date().toLocaleTimeString();
+
+            // document.body.style = 'background-color:lightyellow'; // 아래와 같음
+            document.body.style.backgroundColor = 'lightyellow';
+            // clock2.style = 'color:red; font-size:2em;'; // 아래와 같음
+            clock2.style.color = 'red';
+            clock2.style.fontSize = '2em';
+        };
+    </script>
+</head>
+<body>
+    <!-- id: 태그에서 고유해야 함, class: 태그에서 여러 개 지정 가능 -->
+    <!-- <h1 id="clock" class="clock1"></h1> -->
+    <!-- <p class="clock1 clock1p"></p> -->
+    <h1 class="clock1 clockh1"></h1>
+    <p  class="clock1 clock1p"></p>
+    <input type="text" class="clock2">
+</body>
+</html>
