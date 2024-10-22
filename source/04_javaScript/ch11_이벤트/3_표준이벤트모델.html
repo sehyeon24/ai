@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        window.onload = function(){
+            var h1 = document.querySelector('h1#h');
+            h1.addEventListener('click', ()=>{  // ('click' : 이벤트이름, 실행 시 발생되는 출력)
+                alert('클릭 하셨습니다');
+                h1.innerHTML += '★';
+            });
+        };
+    </script>
+</head>
+<body>
+    <h1 id="h">클릭하세요</h1>
+</body>
+</html>
