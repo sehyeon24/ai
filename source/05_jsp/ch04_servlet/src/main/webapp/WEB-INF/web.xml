@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
+  <display-name>ch04_servlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Quiz1GuGudan</display-name>
+    <servlet-name>Quiz1GuGudan</servlet-name>
+    <servlet-class>com.lec.quiz.Quiz1GuGudan</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Quiz1GuGudan</servlet-name>
+    <url-pattern>/Quiz1GuGudan</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Quiz1</display-name>
+    <servlet-name>Quiz1</servlet-name>
+    <servlet-class>com.lec.quiz.Quiz1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Quiz1</servlet-name>
+    <url-pattern>/Quiz1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Join</display-name>
+    <servlet-name>Join</servlet-name>
+    <servlet-class>com.lec.quiz.Join</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Join</servlet-name>
+    <url-pattern>/join</url-pattern>
+  </servlet-mapping>
+</web-app>

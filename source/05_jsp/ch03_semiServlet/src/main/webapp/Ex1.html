@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link href="css/ex.css" rel="stylesheet">
+</head>
+<body>
+	<!-- http://localhost:8090/ch03_semiServlet/Ex1.html -->
+	<!-- a태그 사용시 get방식으로 호출 -->
+	<p><a href="http://localhost:8090/ch03_semiServlet/HelloWorld">HelloWorld(GET)</a></p>
+	<p><a href="/ch03_semiServlet/HelloWorld">HelloWorld서블릿가기(GET)</a></p>
+	<p><a href="HelloWorld">HelloWorld서블릿가기(GET)</a></p>
+	<!-- location.href 사용시 get방식으로 출력 -->
+	<p><button onclick="location.href='HelloWorld'">HelloWorld서블릿(GET)</button></p>
+	<!-- form태그 submit 사용시 get방식으로 출력 -->
+	<p>
+		<form action="HelloWorld" method="get">
+			<input type="submit" value="HelloWorld서블릿(GET)">			
+		</form>
+	</p>
+	<p>
+		<form action="HelloWorld" method="POST">
+			<input type="submit" value="HelloWorld서블릿(POST)">			
+		</form>
+	</p>
+</body>
+</html>
