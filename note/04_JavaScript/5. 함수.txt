@@ -1,0 +1,52 @@
+5. JS 함수
+
+1) 익명함수
+var functionVar = function() { }; // 함수 표현식
+var functionVar = () => {}; // 화살표 함수
+// 매개변수 지정 방법
+() => { . . . } // 매개변수가 없을 경우
+x =>{ . . . } //매개변수가 한 개인 경우, 소괄호를 생략할 수 있다
+(x, y) => { . . . } // 매개변수가 2개이상인 경우, 소괄호를 생략할 수 없다
+// 함수 몸체 지정 방법
+x => { return x*x } // single line block
+x => x * x         // 함수 몸체가 한줄의 구문이라면 중괄호를 생략
+() => { return { a: 1 }; }
+() => ({ a: 1 })  // 위 표현과 동일하다. 객체 반환시 소괄호를 사용한다.
+
+() => {           // multi line block.
+  const x = 10;
+  return x * x;
+};
+
+2) 선언함수
+function 함수명 ( ) { // 함수 선언식
+
+3) 매개변수와 return값
+function 함수이름(매개변수, 매개변수, 매개변수) {
+	//함수 코드
+	return 리턴값;
+
+4) 가변인자함수
+: 매개변수를 선언된 형태와 다르게 사용했을 때, 매개변수를 모두 활용할 수 있는 함수. 
+  매개변수의 개수가 변할 수 있는 함수 
+  ex) Array()함수
+-arguments : 매개변수 배열
+
+5) 내부함수
+: 함수 내부에 선언하는 함수
+
+6) 자기호출함수
+(fuction(){ … })(); //다른 개발자에게 영향을 주지 않게 함수를 생성하자마자 호출하는 경우
+
+7) 콜백함수
+: 매개변수에 넣어 전달된 함수
+
+8) 클로저함수
+: 리턴된 함수
+
+9) 내장함수
+ex)타이머 함수
+-setTimeout(function, millisecond) ; 일정시간 후 함수를 한번 실행
+-setInterval(function, millisecond) ; 일정시간마다 함수를 반복해서 실행
+-clearTimeout(id) ; setTimeout 중지
+-clearInterval(id); setInterval 중지

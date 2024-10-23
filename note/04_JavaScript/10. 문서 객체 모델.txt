@@ -1,0 +1,12 @@
+10. 문서 객체 모델(Document Object Model : DOM)
+
+-문서 객체 모델 관련 용어 : 태그, 문서객체, 노드
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>INDEX</title>
+</head>
+<body>
+    <h1>TEXT NODE</h1>
+    <img src="img/orange.jpg" alt="오렌지" />
+</body>
+</html>	

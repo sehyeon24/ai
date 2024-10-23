@@ -1,0 +1,11 @@
+8. 기본객체
+
+String : 문자열을 다루기 위한 객체
+ex) concat(args), indexOf(searchString, position), slice(start, end), split(separator, limit), substr(start, count), substring(start, end) ...
+	자기 자신을 변화시키지 않고 return
+
+Date : 날짜와 시간을 처리하기 위한 객체
+ex) getDate(), getDay(), getTime() ...
+
+Array : 배열을 만들어 주는 객체
+ex) concat(), join(), pop(), push(), slice(), sort(), splice() ...
