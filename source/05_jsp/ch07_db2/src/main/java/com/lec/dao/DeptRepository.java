@@ -38,6 +38,7 @@ public class DeptRepository {
 		}
 		return conn;
 	}
+	
 	// SELECT DEPTNO, DNAME FROM DEPT 실행결과 return함수
 	public ArrayList<Dept> deptList(){
 		ArrayList<Dept> dtos = new ArrayList<Dept>();
@@ -72,12 +73,7 @@ public class DeptRepository {
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
-		}
-		
-		
-		
-		
-		
+		}		
 		return dtos;
 	}
 }
