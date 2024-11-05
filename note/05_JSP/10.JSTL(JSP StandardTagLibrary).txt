@@ -1,0 +1,40 @@
+10. JSTL(JSP StandardTagLibrary)
+-Core;
+①출력 태그 : <c:out>
+<c:out value=“출력값” default=“기본값” escapeXml=“true or false”> false를 주면 특수기호를 해석
+②변수 설정 태그 : <c:set>
+<c:set var=“변수명” value=“설정값” target=“객체” property=“값” scope=“범위”>어떤 객체의 속성값을 변수로 지정
+③변수를 제거하는 태그 : <c:remove>
+<c:remove var=“변수명” scope=“범위”>
+④예외 처리 태그 : <c:catch>
+<c:catch var=“변수명”>
+⑤제어문(if)태그 : <c:if>
+<c:if test=“조건” var=“조건 처리 변수명” scope=“범위”>
+⑥제어문 태그 : <c:choose>
+<c:choose>
+<c:when test=“조건1”> 처리 내용 </c:when>
+<c:when test=“조건2”> 처리 내용 </c:when>
+<c:when test=“조건3”> 처리 내용 </c:when>
+<c:otherwise> 처리 내용 </c:otherwise>
+</c:choose>
+⑦반복문(for) 태그 : <c:forEach>
+<c:forEach items=“객체명” begin=“시작 인덱스” end=“끝 인덱스” step=“증감식” var=“변수명” varStatus=“상태변수”>
+<c:forTokens var=“변수명” item=전체스트링 delims=구분자>
+⑧페이지 이동태그 : <c:redirect url=”url”>
+<c:redirect url=“url”>
+
+-fmt
+국제화/형식화 액션. 국제화/형식화 기능을 제공해 주는 JSTL 라이브러리
+①국제화는 다국어 내용을 처리, 형식화는 날짜와 숫자 형식 등을 처리
+<%@taglib prefix=”fmt” uri=”http://java.sum.com/jsp/jstl/fmt” %>
+②인코딩 관련 태그 <fmt:requestEncoding>
+Request 객체로 부터 전달 받은값들을 인코딩할 때 사용 - 보통 한글 값이 넘어올 경우 <fmt:requestEncoding value="utf-8"/>코드로 Request 객체로 받는 값을 한글에 맞게 인코딩해 준다
+<% request.setCharacterEncoding(“utf-8”);%>역할
+③형식화 관련 태그 
+<fmt:formatNumber>
+<fmt:formatNumber value=”값” type=”타입” pattern=”패턴” currencyCode=”값” currencySymbol=”값” groupingUsed=”true or false” maxIntegerDigits=”값” minIntegerDigits=”값” maxFractionDigits=”값” minFractionDigits=”값” var=”변수명” scope=”범위”>
+*태그는 숫자형식의 패턴을 설정할 때 사용
+*value 속성에는 패턴을 적용 시킬 원래의 값을 입력
+<fmt:formatDate>
+<fmt:formatDate value=”값” type=”타입” dateStyle=”값” timeStyle=”값” pattern=”패턴” timeZone=”값” var=”변수명” scope=”범위”>
+

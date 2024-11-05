@@ -1,0 +1,18 @@
+4. Servlet 웹프로그래밍
+-Get방식, Post방식
+doGet() ;
+doPost() ; 매개변수로 HttpServletRequest와 HttpServletResponse를 받음
+      웹브라우저
+          ↓↑
+HttpServletRequest > 클라이언트의 요청 처리 객체
+HttpServletResponse > 클라이언트에게 응답 처리 객체
+
+-파라미터값을 배열로 받는 경우
+
+-컨텍스트 패스(Context Path);
+WAS(Web Application Server)에서 웹어플리케이션을 구분하기 위한 path. 
+해당 웹 어플리케이션이 이름. 이클립스에서 프로젝트를 생성하면, 자동으로 server.xml에 추가됨
+
+-Servlet 작동순서
+클라이언트에서 servlet요청이 들어오면 서버에서는 servlet컨테이너를 만들고, 요청이 있을 때마다 스레드가 생성됨
+웹브라우저 → [웹서버] → [웹어플리케이션서버] → [Servlet 컨테이너 servlet객체생성]

@@ -1,2 +1,100 @@
 11. 이벤트
+­사전적 정의 : 자바 스크립트에서 DOM을 통해 동적인 화면처리를 위해 처리하는 내용
+ex). onclick, onmouseover, onmouseout,m onkeyup(키보드의 특정키를 눌렀다가 올라올 ), eventkeyCode(해당키의 고유 코드값) 등
 
+-인라인 이벤트 모델
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    function whenClick() {
+      alert('click');
+    }
+  </script>
+</head>
+<body>
+  <h1 id="header" 
+      onclick="whenClick()">Click해봐</h1>
+</body>
+
+-기본 이벤트 모델
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    window.onload = function () {
+      var header = document.getElementById('header');      
+      header.onclick = function whenClick() { alert('click'); };
+      // click 이벤트  onclick 이벤트 속성명
+      // whenClick 이벤트 리스너
+    };
+  </script>
+</head>
+<body>
+  <h1 id="header">Click해봐</h1>
+</body>
+
+-표준 이벤트 모델
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    window.onload = function () {
+      var header = document.getElementById('header');
+      header.addEventListener('click', () => {
+        alert('click');
+      });
+    };
+  </script>
+</head>
+<body>
+  <h1 id="header">Click해봐</h1>
+</body>
+
+-이벤트 강제 실행
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            var btnA = document.getElementById('btnA');
+            var btnB = document.getElementById('btnB');
+            var counterA = document.getElementById('counter-a');
+            var counterB = document.getElementById('counter-b');
+            btnA.onclick = function () {
+                counterA.innerHTML = Number(counterA.innerHTML) + 1;
+            };
+            btnB.onclick = function () {
+                counterB.innerHTML = Number(counterB.innerHTML) + 1;
+                btnA.onclick(); //강제 이벤트 발생
+            };
+        };
+    </script>
+</head>
+<body>
+    <button id="btnA">Button A</button>
+    <button id="btnB">Button B</button>
+    <h1>Button A - <span id="counter-a">0</span></h1>
+    <h1>Button B - <span id="counter-b">0</span></h1>
+</body>
+
+-디폴트 이벤트 제거
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    window.onload = function () {
+      var btn = document.getElementById('btn');
+      btn.onclick = function () {
+        alert('경고창 한번만 떠');
+        btn.onclick = null; // 이벤트 제거
+      };
+    };
+  </script>
+</head>
+<body>
+  <button id="btn">BUTTON</button>
+</body>
+
+--인라인 이벤트 모델 - 디폴트 이벤트 제한
+<form onsubmit=”return whenSubmit()”>

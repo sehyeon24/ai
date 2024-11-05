@@ -1,0 +1,24 @@
+3. Servlet
+-Servlet 문서 작성
+@WebServlet(name = "HelloWorld", description = "Ex1", urlPatterns = { "/HelloWorld" })
+@WebServlet("/HelloWorld")
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("Hello World~~");
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+
+-어노테이션을 이용한 서블릿 매핑
+예상경로 : http://localhost:8181/ch03_semiServlet/com.lec.ex.Ex1_HelloWorld
+URL 맵핑 경로 : http://localhost:8181/ch03_semiServlet/HelloWorld
+
+-Web.xml에서 서블릿 매핑
+<servlet> 서블릿 이름을 정하기
+	<servlet-name>HelloWorld</servlet-name>  
+	<servlet-class>com.lec.ex.Ex1_HelloWorld</servlet-class>  
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>HelloWorld</servlet-name>
+  	<url-pattern>/HelloWorld</url-pattern>
+</servlet-mapping>
+*servlet-class : 매핑할 클래스 파일명을 패키지명을 포함하여 입력
+*url-pattern : ‘/’로 시작해야 함
