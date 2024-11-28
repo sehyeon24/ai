@@ -1,0 +1,51 @@
+4. 제어문
+- 조건문(if)
+score = int(input('Enter your score >'))
+if score >= 90:
+    # if문이 참일 때 두 줄 전부 출력(들여쓰기 정렬)
+    print('참 잘했어요')
+    print('다음에도 기대할게요')
+elif score >= 60:
+    print('분발하실거죠?')
+    print('그래도 고생했어요')
+else:
+    print('재시험 응시해야 합니다')
+    print('화이팅')
+
+- 반복문
+-- for-in문
+for 임시변수 in 나열가능한자료:
+    반복할문장1
+    반복할문장2
+else:
+    나열가능한자료를 전부 소요해 for블록을 다 수행한 후, 최종 한 번만 실행할 문장(else:선택사항)
+    for문 안에 break가 있을 경우, else블록은 수행되지 않음
+-- while문
+while 조건:
+    조건이 참일 경우 반복할 문장1
+    조건이 참일 경우 반복할 문장2 ...
+else:
+    조건이 거짓일 경우 한 번 실행할 문장(else:선택사항)
+-- break, continue
+num = 0
+while num < 10:  # 1부터 10까지
+    num += 1  # 1씩 증가
+    if num == 5:
+        # break  # 반복문을 아예 빠져나옴
+        continue  # 반복문을 빠져나오지 않고 조건문으로 올라감
+    print(num, end=' ')
+print('DONE')
+
+- 중첩루프 : 반복문 안의 반복문
+# 2~9단 구구단 출력
+for i in range(2, 10):
+    print('{:^6}'.format(str(i) + '단'), end='\t')  # 6공간 차지
+print()  # 개행
+for i in range(1, 10):  # 1부터 9까지
+    for j in range(2, 10):  # 2단부터 9단까지
+        print('{}x{}={:2}'.format(j, i, i*j), end='\t')  # 곱한 값이 2자리일 수 있으므로 2자리 차지
+    print()  # 개행
+
+- 중첩루프 탈출
+방법1. 플래그 변수 이용
+중첩 방법2. Exception 이용
