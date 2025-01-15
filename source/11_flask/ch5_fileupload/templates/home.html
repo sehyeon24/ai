@@ -19,7 +19,7 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col" colspan="3">파일명</th>
+            <th scope="col" colspan="2">파일명</th>
             <th scope="col">생성시간</th>
             <th scope="col">수정시간</th>
             <th scope="col">파일크기</th>
@@ -30,8 +30,7 @@
             {% for info in infos %}
               <tr>
                 <th scope="row">{{ loop.index }}</th>
-                <td onclick="location.href='/download/{{ info['name'] }}'"></td>
-                <td>
+                <td onclick="location.href='/download/{{ info['name'] }}'">
                   {{ info['name'] }}
                 </td>
                 <td><a href="/del/{{ info['name'] }}">삭제</a></td>
