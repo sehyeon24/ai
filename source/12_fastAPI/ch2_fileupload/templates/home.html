@@ -34,8 +34,9 @@
                   {{ info['name'] }}
                 </td>
                 <td>
-                  <a href="/del/{{ info['name'] }}">삭제</a>
-<!--                  <span>삭제</span>-->
+                  <!-- get방식 -->
+                  <!-- <a href="/del/{{ info['name'] }}">삭제</a> -->
+                  <span data-id="{{ info['name'] }}">삭제</span>
                 </td>
                 <td>{{ info['create'].strftime('%Y-%m-%d %H:%M') }}</td>
                 <td>{{ info['modify'].strftime('%Y-%m-%d %H:%M') }}</td>
@@ -51,5 +52,24 @@
       </table>
     </div>
   </div>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function(){
+      $('span').click(function(e){  // e : 클릭된 엘리먼트
+        // console.log(e);  # console창에 출력
+        filename = e.target.dataset.id;
+        // fetch('/del/' + filename, {method:'DELETE'});
+        fetch('/del/' + filename, {method:'DELETE'})
+        .then(response=>{  // .then(function(response){})
+          return response.text();  // 서버에 응답 내용을 text로 return
+        })
+        .then(data=>{
+          alert(data);
+        });
+        location.reload();  // 현재 페이지를 다시 load
+      });
+    });
+  </script>
 </body>
 {% endblock %}

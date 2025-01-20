@@ -13,7 +13,7 @@ from fastapi.staticfiles import StaticFiles     # static mount
 from fastapi.templating import Jinja2Templates  # 템플릿 지정
 from starlette.responses import RedirectResponse  # redirect
 from starlette.exceptions import HTTPException    # 예외발생
-from fastapi.responses import FileResponse        # 파일 다운로드
+from fastapi.responses import FileResponse      # 파일 다운로드
 
 import os
 import datetime
@@ -69,7 +69,21 @@ async def upload(request:Request, file:UploadFile=File()):
     else:  # 파일 첨부 x
         return RedirectResponse(url='/', status_code=307)
 
-@app.get('/del/{filename}')
-async def delete(filename:str):
+@app.get('/download/{filename}')  # status_code=200 생략되어 있음
+async def download_file(filename):
+    return FileResponse(UPLOAD_FOLDER + filename,
+                        media_type='application/actet-stream',  # 브라우저에서 열지 않고 다운로드
+                        filename=filename)  # 생략 가능
+
+# @app.get('/del/{filename}')
+# async def delete(filename:str):
+#     os.remove(UPLOAD_FOLDER + filename)
+#     return RedirectResponse('/')
+
+@app.delete('/del/{filename}')
+async def delete_file(filename:str):
+    if not os.path.exists(UPLOAD_FOLDER + filename):  # 파일이 존재하지 않으면
+        # raise HTTPException(status_code=404, detail="FILE NOT FOUND")
+        return f'{filename}은 없는 파일입니다'
     os.remove(UPLOAD_FOLDER + filename)
-    return RedirectResponse('/')
+    return f'{filename} 삭제 성공'
