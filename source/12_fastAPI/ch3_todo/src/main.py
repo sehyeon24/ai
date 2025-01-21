@@ -39,10 +39,9 @@ todo_data = {
 }
 
 @app.get('/')
-# async def health_check_handler():
-#     return {'status':'ok'}
 # /todos(할 일 1부터 출력), /todos?order=desc(할 일 역순으로 출력)
 @app.get('/todos')
+@app.post('/todos')  # create 후 현 위치로
 async def get_todos_handler(request:Request,  # html로 전송
                             order:str|None=None):
     # return todo_data
@@ -59,3 +58,20 @@ async def get_todo_detail_handler(request:Request, todo_id:int):
     todo = todo_data.get(todo_id, {})  # todo_data[todo_id]
     return templates.TemplateResponse('todo.html',
                                       {'request':request, 'todo':todo})
+
+@app.post('/create')
+# async def create_todo_handler(id:int=Form(), contents:str, is_done:bool|None=False)
+async def create_todo_handler(todo:ToDoRequest=Form()):
+    # print('form 태그로부터 입력된 todo : ', todo)
+    todo_data[todo.id] = todo.dict()
+    # {'id':todo.id, 'contents':todo.contents, 'is_done':todo.is_done}
+    return RedirectResponse('/todos')
+
+@app.delete('/delete/{todo_id}', status_code=200)
+async def delete_todo_handler(todo_id:int):
+    # del todo_data[todo_id]  # key값이 없는 것을 입력 시 에러 발생(불안정)
+    # .pop : key가 없는 todo_id를 입력할 경우 None이 todo에 들어감
+    todo = todo_data.pop(todo_id, None)
+    if todo:
+        return f'{todo_id}번 todo 삭제 성공'
+    return f'{todo_id}는 등록되지 않은 todo로 삭제 실패'
