@@ -1,6 +1,6 @@
 # src -> 소스 루트
 # pip install fastapi
-# pip install uvicorn
+# pip install uvicorn --no-cache-dir
 # pip install jinja2
 # pip install python-multipart
 
@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # 현재 폴더의 절대
 app.mount('/static', StaticFiles(directory=os.path.join(BASE_DIR, '../static')), name='static')
 templates = Jinja2Templates(directory=os.path.join(BASE_DIR, '../templates'))
 
-@app.get('/')
-async def health_check_handler():
-    return {'status':'ok'}
+# @app.get('/')
+# async def health_check_handler():
+#     return {'status':'ok'}
 
 todo_data = {
     1:{'id':1,
@@ -35,17 +35,27 @@ todo_data = {
        'is_done':False},
     3:{'id':3,
        'contents':'머신러닝 공부',
-       'is_done':False},
-    4:{'id':4,
-       'contents':'Django 공부',
        'is_done':False}
 }
 
+@app.get('/')
+# async def health_check_handler():
+#     return {'status':'ok'}
 # /todos(할 일 1부터 출력), /todos?order=desc(할 일 역순으로 출력)
 @app.get('/todos')
-async def get_todos_handler(request:Request, order:str|None=None):
+async def get_todos_handler(request:Request,  # html로 전송
+                            order:str|None=None):
     # return todo_data
     todos = list(todo_data.values())  # 딕셔너리 -> 리스트 변환
     if order and order.upper() == 'DESC':
         todos = todos[::-1]
-    return todos
+    next_id = max(todo_data.keys())+1
+    return templates.TemplateResponse('todos.html',  # todos 목록, todos 입력 form
+                                      {'request':request, 'todos':todos, 'next_id':next_id,
+                                       'order':order.upper() if order else ''})
+
+@app.get('/todos/{todo_id}')  # status_code=200 기본값
+async def get_todo_detail_handler(request:Request, todo_id:int):
+    todo = todo_data.get(todo_id, {})  # todo_data[todo_id]
+    return templates.TemplateResponse('todo.html',
+                                      {'request':request, 'todo':todo})
