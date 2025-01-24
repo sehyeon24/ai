@@ -13,7 +13,7 @@ class ToDo(Base):
     contents = Column(String(256), nullable=False)
     is_done  = Column(Boolean, default=False, nullable=False)
     def __repr__(self):  # 디버깅시 사용
-        return f'id:{self.id}, contents:{self.contents}, is_done:{self.is_done}'
+        return f'ToDo<id:{self.id}, contents:{self.contents}, is_done:{self.is_done}>'
 
 if __name__ == '__main__':
     Base.metadata.create_all(bind=engine)  # 테이블이 없을 시 테이블 생성
