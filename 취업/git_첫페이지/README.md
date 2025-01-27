@@ -1,9 +1,10 @@
-# (산대특) 스마트 팩토리 혁신을 위한 AI 솔루션 개발자 양성과정 공부일지
+# LINK
+### 공부일지 <a href="https://github.com/yisy0703/ai"><img src="https://img.shields.io/badge/공부일지-0000FF?style=for-the-badge&logo=github&logoColor=white"/></a>
+### 1st PERSONAL PROJECT <a href="https://github.com/yisy0703/1stPersonalProject"><img src="https://img.shields.io/badge/PROJ[우리영화언제쯤]-FF0000?style=for-the-badge&logo=github&logoColor=white"/></a>
+### 2ed TEAM PROJECT <a href="https://github.com/yisy0703/1stPersonalProject"><img src="https://img.shields.io/badge/TEAMPRO[미정]-33FF33?style=for-the-badge&logo=github&logoColor=black"/></a>
 
-# 교육이수 기술 내역서
-![교육이수기술내역서](https://github.com/user-attachments/assets/ea4732c8-6b13-41dc-adce-b3690d2776dc)
 
-# 📚 SKIL
+ # 📚 SKIL
  ### Programming
 <div>
   <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=eclipse&logoColor=white">
@@ -47,4 +48,4 @@
   <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
  </div>
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=sehyeon24&show_icons=true&theme=radical)
+
