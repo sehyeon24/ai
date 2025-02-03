@@ -1,6 +1,6 @@
 # LINK
-### 공부일지 <a href="https://github.com/yisy0703/ai"><img src="https://img.shields.io/badge/공부일지-0000FF?style=for-the-badge&logo=github&logoColor=white"/></a>
-### 1st PERSONAL PROJECT <a href="https://github.com/yisy0703/1stPersonalProject"><img src="https://img.shields.io/badge/PROJ[우리영화언제쯤]-FF0000?style=for-the-badge&logo=github&logoColor=white"/></a>
+### 공부일지 <a href="https://github.com/sehyeon24/ai"><img src="https://img.shields.io/badge/공부일지-0000FF?style=for-the-badge&logo=github&logoColor=white"/></a>
+### 1st PERSONAL PROJECT <a href="https://github.com/sehyeon24/1stPersonalProject"><img src="https://img.shields.io/badge/PROJ[흡연과 금연의 줄다리기]-FF0000?style=for-the-badge&logo=github&logoColor=white"/></a>
 ### 2ed TEAM PROJECT <a href="https://github.com/yisy0703/1stPersonalProject"><img src="https://img.shields.io/badge/TEAMPRO[미정]-33FF33?style=for-the-badge&logo=github&logoColor=black"/></a>
 
 
@@ -11,7 +11,6 @@
   <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
   <img src="https://img.shields.io/badge/tensorflow-55ff55?style=for-the-badge&logo=fastapi&logoColor=white">
   <img src="https://img.shields.io/badge/sklearn-55ff55?style=for-the-badge&logo=fastapi&logoColor=white">
-  <img src="https://img.shields.io/badge/fastapi-FF0000?style=for-the-badge&logo=fastapi&logoColor=white">
 </div>
 
  ### DBMS 
