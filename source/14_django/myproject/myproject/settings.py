@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_extensions",  # 추가 앱등록(shell_plus 사용 목적:model들 자동 import)
     "blog",  # 앱등록
     "articles",
 ]
@@ -108,11 +109,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "ko-kr"  # 한국어 세팅 / 기본값:"en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Seoul" # 기본값:"UTC"
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

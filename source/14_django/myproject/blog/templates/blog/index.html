@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome Page{% endblock %}
+
+{% block content %}
+    {% if post_list %}
+        <ul>
+        {% for post in post_list %}
+            <li>
+                <a href="/blog/{{ post.id }}">{{ post.id }}.{{ post.title }}</a>
+                <a href="{% url 'blog:detail' post.id %}">{{ post.id }}.{{ post.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No posts are available.</p>
+    {% endif %}
+    <button class="btn btn-primary" onclick="location='/blog/json'">
+        json 보기
+    </button>
+    <button class="btn btn-primary" onclick="location='/blog/excel'">
+        excel 다운로드
+    </button>
+    <button class="btn btn-primary" onclick="location='/blog/csv'">
+        csv 다운로드
+    </button>
+    <button class="btn btn-primary" onclick="location='/blog/csvexcel'">
+        csv_excel 다운로드
+    </button>
+    <button class="btn btn-primary" onclick="location='/blog/redirect1'">
+        blog 상세보기
+    </button>
+    <button class="btn btn-primary" onclick="location='/blog/redirect2'">
+        Google
+    </button>
+{% endblock %}
