@@ -1,0 +1,9 @@
+python -m pip install --upgrade pip
+pip install django
+장고 프로젝트 생성 : django-admin startproject 프로젝트명 .
+SECRET_KEY 암호화 : pip install python-decouple
+shell_plus 사용 : pip install django-extensions => 앱등록(django_extensions)
+pip install pandas, pip install sklearn, pip install tensorflow 등
+데이터프레임(버퍼)을 excel로 다운로드 : pip install openpyxl
+
+==> pip install -r requirements.txt
