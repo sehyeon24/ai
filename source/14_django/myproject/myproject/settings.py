@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+import os.path
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django_extensions",  # 추가 앱등록(shell_plus 사용 목적:model들 자동 import)
     "blog",  # 앱등록
-    "articles",
+    "accounts",
+    "book",
+    "django.contrib.humanize",  # intcomma(세 자리 마다 ,) 필터 사용
 ]
 
 MIDDLEWARE = [
@@ -58,7 +60,7 @@ ROOT_URLCONF = "myproject.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, 'myproject', 'templates'),],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
