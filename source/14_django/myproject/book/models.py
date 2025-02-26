@@ -3,6 +3,7 @@ from django import forms
 from django.core.validators import MinLengthValidator
 from django.core.validators import MinValueValidator
 from django.core.validators import MaxValueValidator
+from django.urls import reverse
 
 # Create your models here.
 
@@ -18,8 +19,13 @@ class Book(models.Model):
     publication_date = models.DateTimeField(auto_now_add=True)
     sales     = models.IntegerField(verbose_name='판매가', default=1000, validators=[MinValueValidator(0), MaxValueValidator(1000000)])
     ip        = models.GenericIPAddressField(blank=True, null=True)
+
     def __str__(self):
         return '{} : {}著 {:,}원 from{}'.format(self.title, self.author, self.sales, self.ip)
+
+    def get_absolute_url(self):
+        return reverse('book:list')  # book.get_absolute_url 자동 호출
+        # return reverse('book:edit', args=[self.id])  # 상세보기 페이지
     class Meta:
         ordering = ['-publication_date']
         unique_together = (('title', 'author'), )

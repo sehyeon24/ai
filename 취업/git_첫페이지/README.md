@@ -1,3 +1,5 @@
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&fontSize=40&fontAlignY=40&animation=fadeIn&text=sehyeon's%20GitHub)
+
 # LINK
 ### 공부일지 <a href="https://github.com/sehyeon24/ai"><img src="https://img.shields.io/badge/공부일지-0000FF?style=for-the-badge&logo=github&logoColor=white"/></a>
 ### 1st PERSONAL PROJECT <a href="https://github.com/sehyeon24/1stPersonalProject"><img src="https://img.shields.io/badge/PROJ[흡연과 금연의 줄다리기]-FF0000?style=for-the-badge&logo=github&logoColor=white"/></a>
