@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "accounts",
     "book",
     "django.contrib.humanize",  # intcomma(세 자리 마다 ,) 필터 사용
+    "article",
 ]
 
 MIDDLEWARE = [
@@ -122,6 +123,11 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = "static/"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'myproject', 'static'),]
+STATIC_ROOT = os.path.join(BASE_DIR, '..', '_staticfiles') # 운영 시 static 경로
+
+MEDIA_URL = '/media/'  # media 파일에 대한 URL Prefix
+MEDIA_ROOT = os.path.join(BASE_DIR, '_media') # 업로드된 파일을 저장할 디렉터리 경로
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
