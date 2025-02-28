@@ -21,8 +21,15 @@ from django.shortcuts import redirect
 urlpatterns = [
     path("admin/", admin.site.urls),
     # path('', lambda r : redirect('blog:index')),
-    path('', lambda r : redirect('book:list')),
+    path('', lambda r : redirect('article:list')),
     path('blog/', include('blog.urls')),
-    path('book/', include('book.urls')),
+    path('article/', include('article.urls')),
     path('article/', include('article.urls')),
 ]
+
+from django.conf.urls.static import static
+from . import settings
+# 사용자가 업로드한 파일(MEDIA_ROOT)을 url(MEDIA_URL)과 연결
+# 장고에서 static : 자동 연결 / media : 개발자가 연결
+urlpatterns += static(settings.MEDIA_URL,  # '/media/'
+                      document_root=settings.MEDIA_ROOT)

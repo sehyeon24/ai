@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     "django_extensions",  # 추가 앱등록(shell_plus 사용 목적:model들 자동 import)
     "blog",  # 앱등록
     "accounts",
-    "book",
     "django.contrib.humanize",  # intcomma(세 자리 마다 ,) 필터 사용
     "article",
 ]

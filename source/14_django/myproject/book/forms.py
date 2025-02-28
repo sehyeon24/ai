@@ -10,7 +10,7 @@ class BookForm(forms.Form):
     publisher = forms.CharField(label='출판사', required=False)
     sales     = forms.IntegerField(initial=1000, validators=[MinValueValidator(0), MaxValueValidator(1000000)])
     def save(self, commit=False):
-        # book = Book(title = self.cleaned_data['title'],
+        # article = Book(title = self.cleaned_data['title'],
         #             author = self.cleaned_data['author'],
         #             publisher = self.cleaned_data['publisher'],
         #             sales = self.cleaned_data['sales'])

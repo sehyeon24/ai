@@ -24,8 +24,8 @@ class Book(models.Model):
         return '{} : {}著 {:,}원 from{}'.format(self.title, self.author, self.sales, self.ip)
 
     def get_absolute_url(self):
-        return reverse('book:list')  # book.get_absolute_url 자동 호출
-        # return reverse('book:edit', args=[self.id])  # 상세보기 페이지
+        return reverse('article:list')  # article.get_absolute_url 자동 호출
+        # return reverse('article:edit', args=[self.id])  # 상세보기 페이지
     class Meta:
         ordering = ['-publication_date']
         unique_together = (('title', 'author'), )
