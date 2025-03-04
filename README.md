@@ -1,7 +1,7 @@
 # (산대특) 스마트 팩토리 혁신을 위한 AI 솔루션 개발자 양성과정 공부일지
 
 # 교육이수 기술 내역서
-![교육이수기술내역서](https://github.com/user-attachments/assets/ea4732c8-6b13-41dc-adce-b3690d2776dc)
+![교육이수기술내역서](https://github.com/user-attachments/assets/d36911d4-bdfb-4b1f-9e53-3dae3f118325)
 
 # 📚 SKIL
  ### Programming
