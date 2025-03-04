@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "blog",  # 앱등록
     "accounts",
     "django.contrib.humanize",  # intcomma(세 자리 마다 ,) 필터 사용
+    "book",
     "article",
 ]
 
@@ -91,18 +92,19 @@ DATABASES = {
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
-    },
+    # { # user 속성과 유사한 경우 X
+    #     "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+    # },
+    # { # 최소 8자리 이상
+    #     "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+    #     "OPTIONS": {"min_lenght":2}
+    # },
+    # { # 흔한 비밀번호 X
+    #     "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+    # },
+    # { # 숫자만인 비밀번호 X
+    #     "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+    # },
 ]
 
 
@@ -132,3 +134,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, '_media') # 업로드된 파일을 저장할
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.naver.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_SSL = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

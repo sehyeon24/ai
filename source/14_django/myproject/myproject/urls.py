@@ -21,10 +21,11 @@ from django.shortcuts import redirect
 urlpatterns = [
     path("admin/", admin.site.urls),
     # path('', lambda r : redirect('blog:index')),
-    path('', lambda r : redirect('article:list')),
+    path('', lambda r : redirect('blog:index')),
     path('blog/', include('blog.urls')),
+    path('book/', include('book.urls')),
     path('article/', include('article.urls')),
-    path('article/', include('article.urls')),
+    path('accounts/', include('accounts.urls')),
 ]
 
 from django.conf.urls.static import static

@@ -2,13 +2,13 @@ from django.urls import path
 from . import views
 
 '''
-/article/ => book_list
-/article/new => book_new (article 추가)
-/article/1/edit => book_edit (1번 article 수정)
-/article/1/delete => book_delete (1번 article 삭제)
+/book/ => book_list
+/book/new => book_new (book 추가)
+/book/1/edit => book_edit (1번 book 수정)
+/book/1/delete => book_delete (1번 book 삭제)
 '''
 
-app_name = 'article'
+app_name = 'book'
 urlpatterns = [
     path('', views.book_list, name='list'),
     path('new/', views.book_new, name='new'),
